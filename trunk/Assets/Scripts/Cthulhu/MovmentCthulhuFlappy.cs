@@ -4,6 +4,8 @@ using System.Collections;
 public class MovmentCthulhuFlappy : MonoBehaviour 
 {
 	public PlayerJump morreu;
+	public float vel = -0.2f;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -13,7 +15,15 @@ public class MovmentCthulhuFlappy : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Time.timeScale == 1 && morreu.morreu == false)
-		transform.Translate(-0.2f, 0, 0);
+		vel = PlayerJump.player.vel;
+		if(Time.timeScale == 1 && (morreu.morreu == false || morreu.end == false))
+		{
+			transform.Translate(vel, 0, 0);
+		}
+
+		/*if(PlayerJump.player.pontos >= 2)
+		{
+			gameObject.SetActive(false);
+		}*/
 	}
 }
