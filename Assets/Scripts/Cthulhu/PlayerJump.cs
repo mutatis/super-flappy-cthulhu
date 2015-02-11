@@ -3,7 +3,9 @@ using System.Collections;
 
 public class PlayerJump : MonoBehaviour {
 
+	public static PlayerJump player;	
 	public float jumpForce;
+	public float vel = -0.2f;
 	[HideInInspector]
 	public int pontos;
 	Animator flappy;
@@ -17,6 +19,12 @@ public class PlayerJump : MonoBehaviour {
 	public AudioClip audio;
 	public AudioClip death;
 	public AudioClip point;
+	public Animator anim;
+
+	void Awake()
+	{
+		player = this;
+	}
 
 	// Use this for initialization
 	void Start () 
@@ -29,7 +37,7 @@ public class PlayerJump : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Time.timeScale == 1 && morreu == false)
+		if(morreu == false)
 		{
 			if(Input.GetMouseButtonDown(0))
 			{
@@ -71,8 +79,10 @@ public class PlayerJump : MonoBehaviour {
 	{
 		if(collision.gameObject.tag == "Enemy")
 		{
+			vel = 0;
 			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			morreu = true;
+			anim.enabled = false;
 			box.isTrigger = true;
 			transform.eulerAngles = new Vector3(0, 0, -87);
 			if(cont == 0)
@@ -83,7 +93,10 @@ public class PlayerJump : MonoBehaviour {
 		}
 		if(collision.gameObject.tag == "Ground")
 		{
+			vel = 0;
+			morreu = true;
 			end = true;
+			anim.enabled = false;
 			Time.timeScale = 0;
 			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			if(cont == 0)
@@ -110,7 +123,9 @@ public class PlayerJump : MonoBehaviour {
 		}
 		if(other.gameObject.tag == "Enemy")
 		{
+			vel = 0;
 			morreu = true;
+			anim.enabled = false;
 			if(cont == 0)
 			{
 				dead.SetActive(true);
@@ -119,7 +134,10 @@ public class PlayerJump : MonoBehaviour {
 		}
 		if(other.gameObject.tag == "Ground")
 		{
+			vel = 0;
+			morreu = true;
 			end = true;
+			anim.enabled = false;
 			Time.timeScale = 0;
 			if(cont == 0)
 			{

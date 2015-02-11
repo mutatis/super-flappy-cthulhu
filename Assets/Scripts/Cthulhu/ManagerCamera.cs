@@ -4,6 +4,7 @@ using System.Collections;
 public class ManagerCamera : MonoBehaviour 
 {
 	int cont;
+	public GameObject tap;
 
 	void Awake()
 	{
@@ -13,7 +14,7 @@ public class ManagerCamera : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-	
+
 	}
 	
 	// Update is called once per frame
@@ -21,6 +22,7 @@ public class ManagerCamera : MonoBehaviour
 	{
 		if(Time.timeScale == 0 && Input.GetMouseButtonDown(0) && cont == 0)
 		{
+			tap.SetActive (false);
 			Time.timeScale = 1;
 			cont ++;
 		}

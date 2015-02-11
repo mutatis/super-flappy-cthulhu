@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{100483DA-29AE-8F2B-4486-DA730C78EECF}</ProjectGuid>
+	<ProjectGuid>{CBE0397B-A700-DBE3-B309-5067861CD95A}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,10 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Background\Inicio.cs" />
      <Compile Include="Assets\Scripts\Background\NuvemFalppy.cs" />
      <Compile Include="Assets\Scripts\Cano\Cano.cs" />
      <Compile Include="Assets\Scripts\Cano\Cano1.cs" />
      <Compile Include="Assets\Scripts\Cano\Mexe.cs" />
+     <Compile Include="Assets\Scripts\Compartilhamento\ShareFacebook.cs" />
      <Compile Include="Assets\Scripts\Criação\CreatedFlappy.cs" />
      <Compile Include="Assets\Scripts\Criação\SpriteRowCreator.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\Dead.cs" />

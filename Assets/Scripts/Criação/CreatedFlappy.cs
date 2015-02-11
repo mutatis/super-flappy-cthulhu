@@ -8,8 +8,8 @@ public class CreatedFlappy : MonoBehaviour {
 	int po;
 
 	// Use this for initialization
-	void Start () {
-		//StartCoroutine("Created");
+	void Start () 
+	{
 		po = pontos.pontos + 10;
 	}
 
