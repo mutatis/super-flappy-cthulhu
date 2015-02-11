@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{4AAD1ED8-DDAB-2A0D-E909-359DD7E21088}") = "SuperFlappyCthulhu", "Assembly-CSharp.csproj", "{100483DA-29AE-8F2B-4486-DA730C78EECF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{100483DA-29AE-8F2B-4486-DA730C78EECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{100483DA-29AE-8F2B-4486-DA730C78EECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{100483DA-29AE-8F2B-4486-DA730C78EECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{100483DA-29AE-8F2B-4486-DA730C78EECF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+															GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.EolMarker = Unix
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+	EndGlobalSection
+
+EndGlobal
