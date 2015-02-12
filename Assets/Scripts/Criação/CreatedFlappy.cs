@@ -5,7 +5,13 @@ public class CreatedFlappy : MonoBehaviour {
 
 	public GameObject flappy;
 	public PlayerJump pontos;
+	public static CreatedFlappy created;
 	int po;
+
+	void Awake()
+	{
+		created = this;
+	}
 
 	// Use this for initialization
 	void Start () 
@@ -17,9 +23,14 @@ public class CreatedFlappy : MonoBehaviour {
 	{
 		if(po == pontos.pontos)
 		{
-			Instantiate(flappy, new Vector3(62.142f, 13.914f, 0), Quaternion.identity);
-			po += 10;
+			Cria();
 		}
+	}
+
+	public void Cria()
+	{
+		Instantiate(flappy, new Vector3(62.142f, 13.914f, 0), Quaternion.identity);
+		po += 10;
 	}
 	
 	IEnumerator Created()

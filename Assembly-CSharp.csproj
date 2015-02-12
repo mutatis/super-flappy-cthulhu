@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Background\DestroyEnemy.cs" />
      <Compile Include="Assets\Scripts\Background\Inicio.cs" />
      <Compile Include="Assets\Scripts\Background\NuvemFalppy.cs" />
      <Compile Include="Assets\Scripts\Cano\Cano.cs" />
@@ -60,6 +61,9 @@
      <Compile Include="Assets\Scripts\Cthulhu\ManagerCamera.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\MovmentCthulhuFlappy.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\PlayerJump.cs" />
+     <Compile Include="Assets\Scripts\Elder Thing\Attack\Fireball.cs" />
+     <Compile Include="Assets\Scripts\Elder Thing\AttackElder.cs" />
+     <Compile Include="Assets\Scripts\Elder Thing\MoventElder.cs" />
      <Compile Include="Assets\Scripts\Interface\Pontos.cs" />
      <Compile Include="Assets\Scripts\Interface\Pontuacao.cs" />
      <Compile Include="Assets\Scripts\Interface\Retryflappy.cs" />

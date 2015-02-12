@@ -21,7 +21,7 @@ public class ShareFacebook : MonoBehaviour {
 		}
 		else if(tipo == 1)
 		{
-			descriptionParameter = "Acabei de fazer " + (PlayerPrefs.GetInt ("flappyS")) + " pontos";
+			descriptionParameter = "Acabei de fazer " + (PlayerJump.player.pontos) + " pontos";
 		}
 	}
 
