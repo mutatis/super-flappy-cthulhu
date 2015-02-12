@@ -20,7 +20,7 @@ public class ImageFalppy : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if(transform.localPosition.y < 20)
+		if(transform.localPosition.y < 18)
 		{
 			transform.localPosition = new Vector3 (0, transform.localPosition.y + 25, 0);
 		}
