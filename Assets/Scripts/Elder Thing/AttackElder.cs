@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AttackElder : MonoBehaviour 
 {
-
+	public GameObject raio;
 	public GameObject fireball;
 	public float[] tempo;
 	public float time;
@@ -26,12 +26,15 @@ public class AttackElder : MonoBehaviour
 	{
 		yield return new WaitForSeconds (time);
 		tiro ++;
-		if(tiro >= 4)
+		if(tiro == 4)
 		{
 			PlayerJump.player.pontos++;
-			tiro = 0;
+			Instantiate(raio, new Vector3(81, transform.position.y, transform.position.z), Quaternion.identity);
 		}
-		Instantiate(fireball, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+		else if(tiro <= 4)
+		{
+			Instantiate(fireball, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+		}
 		time = Random.Range (tempo [0], tempo [1]);
 		StartCoroutine("Go");
 	}
