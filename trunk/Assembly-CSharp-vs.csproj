@@ -62,8 +62,10 @@
      <Compile Include="Assets\Scripts\Cthulhu\MovmentCthulhuFlappy.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\PlayerJump.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Attack\Fireball.cs" />
+     <Compile Include="Assets\Scripts\Elder Thing\Attack\Raio.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\AttackElder.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\MoventElder.cs" />
+     <Compile Include="Assets\Scripts\GameCenter.cs" />
      <Compile Include="Assets\Scripts\Interface\Pontos.cs" />
      <Compile Include="Assets\Scripts\Interface\Pontuacao.cs" />
      <Compile Include="Assets\Scripts\Interface\Retryflappy.cs" />
