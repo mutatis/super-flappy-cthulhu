@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class TextPontos : MonoBehaviour {
-	public PlayerJump pontos;
+public class TextPontos : MonoBehaviour 
+{
 	float pon;
 	Text text;
 
@@ -14,13 +14,13 @@ public class TextPontos : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(pontos.pontos >= pon)
+		if(PlayerJump.player.pontos >= pon)
 		{
 			pon += 0.1f;
 		}
 		else
 		{
-			pon = pontos.pontos;
+			pon = PlayerJump.player.pontos;
 		}
 		text.text = ""+ (int)pon;
 	}

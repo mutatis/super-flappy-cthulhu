@@ -3,7 +3,6 @@ using System.Collections;
 
 public class MovmentCthulhuFlappy : MonoBehaviour 
 {
-	public PlayerJump morreu;
 	public float vel = -0.2f;
 
 	// Use this for initialization
@@ -16,7 +15,7 @@ public class MovmentCthulhuFlappy : MonoBehaviour
 	void Update () 
 	{
 		vel = PlayerJump.player.vel;
-		if(Time.timeScale == 1 && (morreu.morreu == false || morreu.end == false))
+		if(Time.timeScale == 1 && (PlayerJump.player.morreu == false || PlayerJump.player.end == false) && PlayerJump.player.cont == 0)
 		{
 			transform.Translate(vel, 0, 0);
 		}

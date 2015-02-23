@@ -1,14 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Elder Thing\AttackElder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Interface\Retryflappy.cs">
     <Files>
-      <File FileName="..\Estudos\Facebook-OAuth-For-Unity-master\FB_GLOBAL_LEADERBOARD\Assets\Scripts\AppScripts\FBUserConnect.cs" Line="1" Column="1" />
-      <File FileName="..\Estudos\Facebook-OAuth-For-Unity-master\FB_GLOBAL_LEADERBOARD\Assets\Scripts\AppScripts\AppController.cs" Line="1" Column="1" />
-      <File FileName="..\Estudos\Facebook-OAuth-For-Unity-master\FB_GLOBAL_LEADERBOARD\Assets\Scripts\AppScripts\MyGame.cs" Line="1" Column="1" />
-      <File FileName="..\Estudos\Facebook-OAuth-For-Unity-master\FB_GLOBAL_LEADERBOARD\Assets\Scripts\AppScripts\FBLeaderBoard.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameCenter.cs" Line="87" Column="2" />
-      <File FileName="Assets\Scripts\Cthulhu\MovmentCthulhuFlappy.cs" Line="27" Column="6" />
-      <File FileName="Assets\Scripts\Elder Thing\AttackElder.cs" Line="32" Column="40" />
+      <File FileName="Assets\Scripts\Cano\EntradaEspecial.cs" Line="18" Column="44" />
+      <File FileName="Assets\Scripts\Cthulhu\PlayerJump.cs" Line="9" Column="12" />
+      <File FileName="Assets\Scripts\Cthulhu\FlappyChao.cs" Line="16" Column="23" />
+      <File FileName="Assets\Scripts\Cthulhu\MovmentCthulhuFlappy.cs" Line="18" Column="119" />
+      <File FileName="Assets\Scripts\Interface\PainelSpecial.cs" Line="18" Column="1" />
+      <File FileName="Assets\Scripts\Camera\TimeCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Criação\CreatedFlappy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Criação\CreatedDagon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Background\DayNight.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Interface\DesligaAnim.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cthulhu\Dead.cs" Line="14" Column="2" />
+      <File FileName="Assets\Scripts\Cthulhu\SplashDeath.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cthulhu\ImageFalppy.cs" Line="44" Column="30" />
+      <File FileName="Assets\Scripts\Interface\Pontos.cs" Line="7" Column="12" />
+      <File FileName="Assets\Scripts\Interface\TextPontos.cs" Line="23" Column="27" />
+      <File FileName="Assets\Scripts\Background\Inicio.cs" Line="6" Column="29" />
+      <File FileName="Assets\Scripts\Interface\Retryflappy.cs" Line="9" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CreatedFlappy : MonoBehaviour {
 
+	public PlayerJump player;
 	public GameObject flappy;
-	public PlayerJump pontos;
 	public static CreatedFlappy created;
 	int po;
 
@@ -16,12 +16,12 @@ public class CreatedFlappy : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		po = pontos.pontos + 10;
+
 	}
 
 	void Update()
 	{
-		if(po == pontos.pontos)
+		if(po == player.pontos)
 		{
 			Cria();
 		}
