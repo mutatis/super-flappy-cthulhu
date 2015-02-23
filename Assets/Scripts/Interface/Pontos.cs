@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class Pontos : MonoBehaviour 
 {
 	Text text;
-	public PlayerJump pontos;
 
 	// Use this for initialization
 	void Start () 
@@ -16,6 +15,6 @@ public class Pontos : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		text.text = "" + pontos.pontos;
+		text.text = "" + PlayerJump.player.pontos;
 	}
 }

@@ -11,7 +11,7 @@ public class PlayerJump : MonoBehaviour {
 	Animator flappy;
 	public bool morreu;
 	public bool end;
-	PolygonCollider2D box;
+	public PolygonCollider2D box;
 	public int cont;
 	public GameObject dead;
 	public GameObject image;
@@ -29,7 +29,6 @@ public class PlayerJump : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		box = GetComponent<PolygonCollider2D>();
 		flappy = GetComponent<Animator>();
 		Screen.orientation = ScreenOrientation.Portrait;
 	}
@@ -69,9 +68,10 @@ public class PlayerJump : MonoBehaviour {
 				}
 			}
 		}
+
 		if(morreu && end)
 		{
-			transform.position = new Vector2(transform.position.x, 0);
+			transform.position = new Vector2(transform.position.x, transform.position.y - 1);
 		}
 	}
 
@@ -91,6 +91,20 @@ public class PlayerJump : MonoBehaviour {
 				cont = 1;
 			}
 		}
+		if(collision.gameObject.tag == "Fireball")
+		{
+			vel = 0;
+			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			morreu = true;
+			anim.SetTrigger("FireDamage");
+			box.isTrigger = true;
+			transform.eulerAngles = new Vector3(0, 0, -87);
+			if(cont == 0)
+			{
+				dead.SetActive(true);
+				cont = 1;
+			}
+		}
 		if(collision.gameObject.tag == "Ground")
 		{
 			vel = 0;
@@ -98,6 +112,7 @@ public class PlayerJump : MonoBehaviour {
 			end = true;
 			anim.enabled = false;
 			Time.timeScale = 0;
+			box.isTrigger = true;
 			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			if(cont == 0)
 			{
@@ -124,8 +139,21 @@ public class PlayerJump : MonoBehaviour {
 		if(other.gameObject.tag == "Enemy")
 		{
 			vel = 0;
+			box.isTrigger = true;
 			morreu = true;
 			anim.enabled = false;
+			if(cont == 0)
+			{
+				dead.SetActive(true);
+				cont = 1;
+			}
+		}
+		if(other.gameObject.tag == "Fireball")
+		{
+			vel = 0;
+			morreu = true;
+			anim.SetTrigger("FireDamage");
+			box.isTrigger = true;
 			if(cont == 0)
 			{
 				dead.SetActive(true);
@@ -138,6 +166,7 @@ public class PlayerJump : MonoBehaviour {
 			morreu = true;
 			end = true;
 			anim.enabled = false;
+			box.isTrigger = true;
 			Time.timeScale = 0;
 			if(cont == 0)
 			{
