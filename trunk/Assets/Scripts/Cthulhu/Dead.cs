@@ -8,6 +8,7 @@ public class Dead : MonoBehaviour
 	public GameObject menu;
 	public GameObject flash;
 	public Animator[] splash;
+	public AudioClip[] audio;
 
 	// Use this for initialization
 	void Start ()
@@ -23,7 +24,7 @@ public class Dead : MonoBehaviour
 			flash.SetActive(true);
 		}
 		if(morreu.end)
-		{
+		{			
 			for(int i = 0; i < splash.Length; i++)
 			{
 				splash[i].enabled = true;

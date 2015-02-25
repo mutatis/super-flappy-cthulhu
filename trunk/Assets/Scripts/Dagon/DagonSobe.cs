@@ -8,6 +8,7 @@ public class DagonSobe : MonoBehaviour
 	public Transform y;
 	public int tipo;
 	bool va;
+	public AudioClip audio;
 
 	// Use this for initialization
 	void Start () 
@@ -32,6 +33,7 @@ public class DagonSobe : MonoBehaviour
 	{
 		if(other.gameObject.tag == "Apareca")
 		{
+			AudioSource.PlayClipAtPoint(audio, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			va = true;
 		}
 	}
