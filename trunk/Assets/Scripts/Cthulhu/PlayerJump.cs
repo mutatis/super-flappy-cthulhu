@@ -6,6 +6,7 @@ public class PlayerJump : MonoBehaviour {
 	public static PlayerJump player;	
 	public float jumpForce;
 	public float vel = -0.2f;
+	public Transform playerPos;
 	[HideInInspector]
 	public int pontos;
 	Animator flappy;
@@ -29,6 +30,7 @@ public class PlayerJump : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		anim.SetInteger ("Cor", Random.Range (0, 2));
 		flappy = GetComponent<Animator>();
 		Screen.orientation = ScreenOrientation.Portrait;
 	}
@@ -91,20 +93,6 @@ public class PlayerJump : MonoBehaviour {
 				cont = 1;
 			}
 		}
-		if(collision.gameObject.tag == "Fireball")
-		{
-			vel = 0;
-			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
-			morreu = true;
-			anim.SetTrigger("FireDamage");
-			box.isTrigger = true;
-			transform.eulerAngles = new Vector3(0, 0, -87);
-			if(cont == 0)
-			{
-				dead.SetActive(true);
-				cont = 1;
-			}
-		}
 		if(collision.gameObject.tag == "Ground")
 		{
 			vel = 0;
@@ -142,18 +130,6 @@ public class PlayerJump : MonoBehaviour {
 			box.isTrigger = true;
 			morreu = true;
 			anim.enabled = false;
-			if(cont == 0)
-			{
-				dead.SetActive(true);
-				cont = 1;
-			}
-		}
-		if(other.gameObject.tag == "Fireball")
-		{
-			vel = 0;
-			morreu = true;
-			anim.SetTrigger("FireDamage");
-			box.isTrigger = true;
 			if(cont == 0)
 			{
 				dead.SetActive(true);
