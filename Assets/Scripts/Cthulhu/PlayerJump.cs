@@ -17,9 +17,10 @@ public class PlayerJump : MonoBehaviour {
 	public GameObject dead;
 	public GameObject image;
 	public GameObject texto;
-	public AudioClip audio;
+	public AudioClip asa;
 	public AudioClip death;
 	public AudioClip point;
+	public AudioClip afogamento;
 	public Animator anim;
 
 	void Awake()
@@ -43,7 +44,7 @@ public class PlayerJump : MonoBehaviour {
 			if(Input.GetMouseButtonDown(0))
 			{
 				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
-				AudioSource.PlayClipAtPoint(audio, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+				AudioSource.PlayClipAtPoint(asa, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 				//rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
 			}
 			//transform.Translate(0.2f, 0, 0);
@@ -94,7 +95,8 @@ public class PlayerJump : MonoBehaviour {
 			}
 		}
 		if(collision.gameObject.tag == "Ground")
-		{
+		{			
+			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
 			morreu = true;
 			end = true;
@@ -138,6 +140,7 @@ public class PlayerJump : MonoBehaviour {
 		}
 		if(other.gameObject.tag == "Ground")
 		{
+			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
 			morreu = true;
 			end = true;

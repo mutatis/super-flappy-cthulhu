@@ -3,8 +3,9 @@ using System.Collections;
 
 public class EntradaEspecial : MonoBehaviour 
 {
-
+	public AudioClip entra;
 	bool bateu;
+	int som;
 
 	// Use this for initialization
 	void Start () 
@@ -15,8 +16,17 @@ public class EntradaEspecial : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if(som == 1)
+		{
+			AudioSource.PlayClipAtPoint(entra, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			som = 50;
+		}
 		if(bateu && PlayerJump.player.pontos == 2)
 		{
+			if(som == 0)
+			{
+				som = 1;
+			}
 			PlayerJump.player.renderer.sortingOrder = 0;
 			PlayerJump.player.enabled = false;
 			PlayerJump.player.box.enabled = false;
