@@ -21,7 +21,7 @@ public class EntradaEspecial : MonoBehaviour
 			AudioSource.PlayClipAtPoint(entra, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			som = 50;
 		}
-		if(bateu && PlayerJump.player.pontos == 2)
+		if(bateu && PlayerJump.player.pontos == 2 && PlayerJump.player.morreu == false)
 		{
 			if(som == 0)
 			{

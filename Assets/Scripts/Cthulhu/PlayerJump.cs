@@ -41,7 +41,7 @@ public class PlayerJump : MonoBehaviour {
 	{
 		if(morreu == false)
 		{
-			if(Input.GetMouseButtonDown(0))
+			if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
 			{
 				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
 				AudioSource.PlayClipAtPoint(asa, new Vector3(transform.position.x, transform.position.y, transform.position.z));
