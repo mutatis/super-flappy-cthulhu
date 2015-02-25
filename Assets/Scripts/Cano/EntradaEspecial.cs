@@ -31,8 +31,7 @@ public class EntradaEspecial : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		if(collision.gameObject.tag == "Player")
-		{	
-			Debug.Log("Porra");
+		{
 			bateu = true;
 		}
 	}

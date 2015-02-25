@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Cthulhu\MovmentCthulhuFlappy.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\PlayerJump.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\SplashDeath.cs" />
+     <Compile Include="Assets\Scripts\Dagon\DagonSobe.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Attack\Fireball.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Attack\Raio.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\AttackElder.cs" />
@@ -79,9 +80,16 @@
      <Compile Include="Assets\Scripts\Interface\TextHoghScore.cs" />
      <Compile Include="Assets\Scripts\Interface\TextPontos.cs" />
      <Compile Include="Assets\Scripts\Leadboards\Medalhas.cs" />
+     <Compile Include="Assets\Sprite Test\AnimatedSprite.cs" />
+     <Compile Include="Assets\Sprite Test\AnimatedSprite_test.cs" />
+     <None Include="Assets\Textured Text Shader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{D474938D-597B-3951-985D-0D8931E0EE6C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
