@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Cano\Cano1.cs" />
      <Compile Include="Assets\Scripts\Cano\EntradaEspecial.cs" />
      <Compile Include="Assets\Scripts\Cano\Mexe.cs" />
+     <Compile Include="Assets\Scripts\Cano\Saidaespecial.cs" />
      <Compile Include="Assets\Scripts\Compartilhamento\ShareFacebook.cs" />
      <Compile Include="Assets\Scripts\Criação\CreatedDagon.cs" />
      <Compile Include="Assets\Scripts\Criação\CreatedFlappy.cs" />

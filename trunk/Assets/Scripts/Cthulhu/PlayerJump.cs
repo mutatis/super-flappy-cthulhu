@@ -9,10 +9,10 @@ public class PlayerJump : MonoBehaviour {
 	public Transform playerPos;
 	[HideInInspector]
 	public int pontos;
-	Animator flappy;
+	public Animator asaF;
 	public bool morreu;
 	public bool end;
-	public PolygonCollider2D box;
+	public CircleCollider2D box;
 	public int cont;
 	public GameObject dead;
 	public GameObject image;
@@ -22,6 +22,7 @@ public class PlayerJump : MonoBehaviour {
 	public AudioClip point;
 	public AudioClip afogamento;
 	public Animator anim;
+	int num;
 
 	void Awake()
 	{
@@ -31,8 +32,9 @@ public class PlayerJump : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		anim.SetInteger ("Cor", Random.Range (0, 2));
-		flappy = GetComponent<Animator>();
+		num = Random.Range (0, 2);
+		anim.SetInteger ("Cor", num);
+		asaF.SetInteger ("Cor", num);
 		Screen.orientation = ScreenOrientation.Portrait;
 	}
 	
@@ -86,6 +88,7 @@ public class PlayerJump : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			morreu = true;
 			anim.enabled = false;
+			asaF.enabled = false;
 			box.isTrigger = true;
 			transform.eulerAngles = new Vector3(0, 0, -87);
 			if(cont == 0)
@@ -101,6 +104,7 @@ public class PlayerJump : MonoBehaviour {
 			morreu = true;
 			end = true;
 			anim.enabled = false;
+			asaF.enabled = false;
 			Time.timeScale = 0;
 			box.isTrigger = true;
 			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
@@ -132,6 +136,7 @@ public class PlayerJump : MonoBehaviour {
 			box.isTrigger = true;
 			morreu = true;
 			anim.enabled = false;
+			asaF.enabled = false;
 			if(cont == 0)
 			{
 				dead.SetActive(true);
@@ -145,6 +150,7 @@ public class PlayerJump : MonoBehaviour {
 			morreu = true;
 			end = true;
 			anim.enabled = false;
+			asaF.enabled = false;
 			box.isTrigger = true;
 			Time.timeScale = 0;
 			if(cont == 0)
