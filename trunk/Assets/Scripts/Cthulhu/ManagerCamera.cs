@@ -5,6 +5,7 @@ public class ManagerCamera : MonoBehaviour
 {
 	int cont;
 	public GameObject tap;
+	public GameObject pontos;
 
 	void Awake()
 	{
@@ -22,6 +23,7 @@ public class ManagerCamera : MonoBehaviour
 	{
 		if(Time.timeScale == 0 && Input.GetMouseButtonDown(0) && cont == 0)
 		{
+			pontos.SetActive(true);
 			tap.SetActive (false);
 			Time.timeScale = 1;
 			cont ++;

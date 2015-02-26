@@ -7,8 +7,9 @@ public class Raio : MonoBehaviour {
 	public float limitX;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		StartCoroutine("Go");
 	}
 	
 	// Update is called once per frame
@@ -18,5 +19,11 @@ public class Raio : MonoBehaviour {
 		{
 			transform.Translate(velX, 0, 0);
 		}
+	}
+
+	IEnumerator Go()
+	{
+		yield return new WaitForSeconds (2);
+		Destroy (gameObject);
 	}
 }

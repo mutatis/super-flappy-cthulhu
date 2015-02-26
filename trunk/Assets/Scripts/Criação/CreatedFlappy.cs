@@ -29,43 +29,44 @@ public class CreatedFlappy : MonoBehaviour {
 
 	public void Cria()
 	{
-		if(player.pontos < 5)
+		if(player.pontos < 15)
 		{
 			Instantiate(flappy[0], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 10)
+		else if(player.pontos < 25)
 		{
 			Instantiate(flappy[1], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 15)
+		else if(player.pontos < 35)
 		{
 			Instantiate(flappy[2], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 20)
+		else if(player.pontos < 45)
 		{
 			Instantiate(flappy[3], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 25)
+		else if(player.pontos < 50)
 		{
 			Instantiate(flappy[4], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 30)
+		else if(player.pontos < 60)
 		{
 			Instantiate(flappy[5], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 35)
+		else if(player.pontos < 70)
 		{
 			Instantiate(flappy[6], new Vector3(62.142f, 11.914f, 0), Quaternion.identity);
+			Instantiate(flappy[10], new Vector3(71, 7.5f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 40)
+		else if(player.pontos < 80)
 		{
 			Instantiate(flappy[7], new Vector3(62.142f, 11.914f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 45)
+		else if(player.pontos < 90)
 		{
 			Instantiate(flappy[8], new Vector3(62.142f, 11.914f, 0), Quaternion.identity);
 		}
-		else if(player.pontos < 50)
+		else if(player.pontos < 100)
 		{
 			Instantiate(flappy[9], new Vector3(62.142f, 11.914f, 0), Quaternion.identity);
 		}

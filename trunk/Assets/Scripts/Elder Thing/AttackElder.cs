@@ -7,6 +7,7 @@ public class AttackElder : MonoBehaviour
 	public GameObject fireball;
 	public float[] tempo;
 	public float time;
+	public Animator anim;
 	int tiro;
 
 	// Use this for initialization
@@ -28,14 +29,25 @@ public class AttackElder : MonoBehaviour
 		tiro ++;
 		if(tiro == 4)
 		{
-			PlayerJump.player.pontos++;
-			Instantiate(raio, new Vector3(81, transform.position.y, transform.position.z), Quaternion.identity);
+			anim.SetTrigger("Raio");
+			yield return new WaitForSeconds(3);
+			tiro = 0;
 		}
 		else if(tiro <= 4)
 		{
-			Instantiate(fireball, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+			anim.SetTrigger("Fireball");
 		}
 		time = Random.Range (tempo [0], tempo [1]);
 		StartCoroutine("Go");
+	}
+
+	public void Raio()
+	{
+		Instantiate(raio, new Vector3(81, transform.position.y, transform.position.z), Quaternion.identity);
+	}
+
+	public void Firaball()
+	{
+		Instantiate(fireball, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 	}
 }

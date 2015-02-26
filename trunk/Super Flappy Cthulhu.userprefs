@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Dagon\DagonSobe.cs">
     <Files>
-      <File FileName="Assets\Scripts\Dagon\DagonSobe.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cthulhu\MovmentCthulhuFlappy.cs" Line="17" Column="1" />
+      <File FileName="Assets\Scripts\Dagon\DagonSobe.cs" Line="40" Column="2" />
       <File FileName="Assets\Scripts\Cthulhu\PlayerJump.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Cthulhu\Dead.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Cano\Mexe.cs" Line="21" Column="3" />
+      <File FileName="Assets\Scripts\Cano\Mexe.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Cano\EntradaEspecial.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Criação\CreatedFlappy.cs" Line="1" Column="1" />
     </Files>
