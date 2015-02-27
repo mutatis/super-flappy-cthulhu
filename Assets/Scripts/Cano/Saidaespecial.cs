@@ -19,7 +19,7 @@ public class Saidaespecial : MonoBehaviour
 		{
 			som = 50;
 		}
-		if(PlayerJump.player.morreu == false)
+		if(PlayerJump.player.morreu == false && bateu)
 		{
 			if(som == 0)
 			{
@@ -46,7 +46,9 @@ public class Saidaespecial : MonoBehaviour
 	
 	IEnumerator Go()
 	{
+		PlayerPrefs.SetInt ("Pontos", PlayerJump.player.pontos);
+		PlayerPrefs.SetInt ("Retry", 2);
 		yield return new WaitForSeconds (0.3f);
-		Application.LoadLevel("DagonSpecial");
+		Application.LoadLevel("FlappyCthulhu");
 	}
 }

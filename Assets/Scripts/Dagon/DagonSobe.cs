@@ -9,6 +9,7 @@ public class DagonSobe : MonoBehaviour
 	public int tipo;
 	bool va;
 	public AudioClip audio;
+	bool sai;
 
 	// Use this for initialization
 	void Start () 
@@ -27,6 +28,10 @@ public class DagonSobe : MonoBehaviour
 		{
 			transform.Translate(0, vel, 0);
 		}	
+		if(sai && PlayerJump.player.pontos == 57)
+		{
+			Destroy(gameObject);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -35,6 +40,10 @@ public class DagonSobe : MonoBehaviour
 		{
 			AudioSource.PlayClipAtPoint(audio, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			va = true;
+		}
+		if(other.gameObject.tag == "Sai")
+		{
+			sai = true;
 		}
 	}
 }
