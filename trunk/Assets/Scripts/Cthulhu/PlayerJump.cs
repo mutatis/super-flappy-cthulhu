@@ -32,6 +32,7 @@ public class PlayerJump : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		pontos = PlayerPrefs.GetInt ("Pontos");
 		num = Random.Range (0, 2);
 		anim.SetInteger ("Cor", num);
 		asaF.SetInteger ("Cor", num);

@@ -16,7 +16,7 @@ public class CreatedFlappy : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-
+		po = PlayerPrefs.GetInt ("Pontos");
 	}
 
 	void Update()
