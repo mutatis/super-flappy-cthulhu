@@ -31,27 +31,27 @@ public class CreatedFlappy : MonoBehaviour {
 	{
 		if(player.pontos < 15)
 		{
-			Instantiate(flappy[0], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
+			Instantiate(flappy[0], new Vector3(58.142f, 15.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 25)
 		{
-			Instantiate(flappy[1], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
+			Instantiate(flappy[1], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 35)
 		{
-			Instantiate(flappy[2], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
+			Instantiate(flappy[2], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 45)
 		{
-			Instantiate(flappy[3], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
+			Instantiate(flappy[3], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 50)
 		{
-			Instantiate(flappy[4], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
+			Instantiate(flappy[4], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 60)
 		{
-			Instantiate(flappy[5], new Vector3(62.142f, 12.914f, 0), Quaternion.identity);
+			Instantiate(flappy[5], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 70)
 		{

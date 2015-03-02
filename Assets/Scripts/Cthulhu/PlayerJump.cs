@@ -12,7 +12,7 @@ public class PlayerJump : MonoBehaviour {
 	public Animator asaF;
 	public bool morreu;
 	public bool end;
-	public CircleCollider2D box;
+	public PolygonCollider2D box;
 	public int cont;
 	public GameObject dead;
 	public GameObject image;
