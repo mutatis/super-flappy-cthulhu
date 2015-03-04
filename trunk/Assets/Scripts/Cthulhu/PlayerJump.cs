@@ -33,9 +33,6 @@ public class PlayerJump : MonoBehaviour {
 	void Start () 
 	{
 		pontos = PlayerPrefs.GetInt ("Pontos");
-		num = Random.Range (0, 2);
-		anim.SetInteger ("Cor", num);
-		asaF.SetInteger ("Cor", num);
 		Screen.orientation = ScreenOrientation.Portrait;
 	}
 	
@@ -46,6 +43,7 @@ public class PlayerJump : MonoBehaviour {
 		{
 			if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
 			{
+				anim.SetTrigger("Clico");
 				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
 				AudioSource.PlayClipAtPoint(asa, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 				//rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
