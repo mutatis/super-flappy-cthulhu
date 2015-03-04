@@ -35,19 +35,19 @@ public class CreatedFlappy : MonoBehaviour {
 		}
 		else if(player.pontos < 25)
 		{
-			Instantiate(flappy[1], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
+			Instantiate(flappy[1], new Vector3(62.142f, 26.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 35)
 		{
-			Instantiate(flappy[2], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
+			Instantiate(flappy[2], new Vector3(62.142f, 18.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 45)
 		{
-			Instantiate(flappy[3], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
+			Instantiate(flappy[3], new Vector3(62.142f, 24.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 50)
 		{
-			Instantiate(flappy[4], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
+			Instantiate(flappy[4], new Vector3(62.142f, 24.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 60)
 		{
@@ -55,20 +55,24 @@ public class CreatedFlappy : MonoBehaviour {
 		}
 		else if(player.pontos < 70)
 		{
-			Instantiate(flappy[6], new Vector3(62.142f, 11.914f, 0), Quaternion.identity);
+			Instantiate(flappy[6], new Vector3(62.142f, 16.914f, 0), Quaternion.identity);
 			Instantiate(flappy[10], new Vector3(71, 7.5f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 80)
 		{
-			Instantiate(flappy[7], new Vector3(62.142f, 11.914f, 0), Quaternion.identity);
+			Instantiate(flappy[7], new Vector3(62.142f, 15.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 90)
 		{
-			Instantiate(flappy[8], new Vector3(62.142f, 11.914f, 0), Quaternion.identity);
+			Instantiate(flappy[8], new Vector3(62.142f, 25.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 100)
 		{
-			Instantiate(flappy[9], new Vector3(62.142f, 11.914f, 0), Quaternion.identity);
+			Instantiate(flappy[9], new Vector3(62.142f, 22.914f, 0), Quaternion.identity);
+		}
+		else if(player.pontos < 100)
+		{
+			Instantiate(flappy[11], new Vector3(70.142f, 22.914f, 0), Quaternion.identity);
 		}
 		po += 5;
 	}
