@@ -48,31 +48,33 @@ public class PlayerJump : MonoBehaviour {
 				AudioSource.PlayClipAtPoint(asa, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 				//rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
 			}
-			//transform.Translate(0.2f, 0, 0);
-			if(rigidbody2D.velocity.y < 0)
+			if(Time.timeScale != 0)
 			{
-				if(transform.eulerAngles.z >= -87)
+				//transform.Translate(0.2f, 0, 0);
+				if(rigidbody2D.velocity.y < 0)
 				{
-					transform.Rotate(0, 0, -2f);
+					if(transform.eulerAngles.z >= -87)
+					{
+						transform.Rotate(0, 0, -2f);
+					}
+					else
+					{
+						transform.eulerAngles = new Vector3(0, 0, -87);
+					}
 				}
-				else
+				else if(rigidbody2D.velocity.y > 0)
 				{
-					transform.eulerAngles = new Vector3(0, 0, -87);
-				}
-			}
-			else if(rigidbody2D.velocity.y > 0)
-			{
-				if(transform.eulerAngles.z <= 19)
-				{
-					transform.Rotate(0, 0, 0.5f);
-				}
-				else
-				{
-					transform.eulerAngles = new Vector3(0, 0, 19);
+					if(transform.eulerAngles.z <= 19)
+					{
+						transform.Rotate(0, 0, 0.5f);
+					}
+					else
+					{
+						transform.eulerAngles = new Vector3(0, 0, 19);
+					}
 				}
 			}
 		}
-
 		if(morreu && end)
 		{
 			transform.position = new Vector2(transform.position.x, transform.position.y - 1);
