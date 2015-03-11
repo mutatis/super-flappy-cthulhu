@@ -48,8 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\FontEditorCs.cs" />
      <None Include="Assets\Textured Text Shader.shader" />
+     <None Include="Assets\README.txt" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/Pedro/Documents/super-flappy-cthulhu/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>C:/Users/DagonStudios/Documents/super-flappy-cthulhu/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
@@ -62,8 +63,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{41046401-F539-9322-EB2F-0B5107BBBE5F}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
       <Project>{7F1959FA-6FE4-75CA-3BAB-E588C832046E}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>

@@ -50,13 +50,10 @@
      <Compile Include="Assets\Sprite Test\AnimatedSpritejs_test.js" />
      <Compile Include="Assets\Sprite Test\Example Scene Assets\CameraFollow.js" />
      <None Include="Assets\Textured Text Shader.shader" />
+     <None Include="Assets\README.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{41046401-F539-9322-EB2F-0B5107BBBE5F}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
