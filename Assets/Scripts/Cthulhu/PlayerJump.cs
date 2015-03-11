@@ -55,7 +55,7 @@ public class PlayerJump : MonoBehaviour {
 				{
 					if(transform.eulerAngles.z >= -87)
 					{
-						transform.Rotate(0, 0, -2f);
+						transform.Rotate(0, 0, -4f);
 					}
 					else
 					{
