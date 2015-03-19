@@ -35,7 +35,7 @@ public class CreatedFlappy : MonoBehaviour {
 		}
 		else if(player.pontos < 25)
 		{
-			Instantiate(flappy[1], new Vector3(62.142f, 26.914f, 0), Quaternion.identity);
+			Instantiate(flappy[1], new Vector3(62.142f, 30.914f, 0), Quaternion.identity);
 		}
 		else if(player.pontos < 35)
 		{
