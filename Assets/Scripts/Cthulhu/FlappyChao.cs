@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FlappyChao : MonoBehaviour {
 
-	public PlayerJump player;
+	//public PlayerJump player;
 	public Transform posX;
 
 	// Use this for initialization
@@ -14,7 +14,7 @@ public class FlappyChao : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(player.cont == 0)
+		if(PlayerJump.player.cont == 0)
 		{
 			transform.Translate(-0.2f, 0, 0);
 			if(transform.position.x <= posX.position.x)

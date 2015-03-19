@@ -6,17 +6,15 @@ public class PlayerJump : MonoBehaviour {
 	public static PlayerJump player;	
 	public float jumpForce;
 	public float vel = -0.2f;
-	public Transform playerPos;
 	[HideInInspector]
 	public int pontos;
-	public Animator asaF;
 	public bool morreu;
 	public bool end;
 	public PolygonCollider2D box;
 	public int cont;
-	public GameObject dead;
-	public GameObject image;
-	public GameObject texto;
+	//public GameObject dead;
+	//public GameObject image;
+	//public GameObject texto;
 	public AudioClip asa;
 	public AudioClip death;
 	public AudioClip point;
@@ -89,12 +87,10 @@ public class PlayerJump : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			morreu = true;
 			anim.enabled = false;
-			asaF.enabled = false;
 			box.isTrigger = true;
 			transform.eulerAngles = new Vector3(0, 0, -87);
 			if(cont == 0)
 			{
-				dead.SetActive(true);
 				cont = 1;
 			}
 		}
@@ -105,21 +101,17 @@ public class PlayerJump : MonoBehaviour {
 			morreu = true;
 			end = true;
 			anim.enabled = false;
-			asaF.enabled = false;
 			Time.timeScale = 0;
 			box.isTrigger = true;
 			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			if(cont == 0)
 			{
-				dead.SetActive(true);
 				cont = 1;
 			}
 			if(pontos > PlayerPrefs.GetInt("flappyS"))
 			{
 				PlayerPrefs.SetInt("flappyS", pontos);
 			}
-			image.SetActive(true);
-			texto.SetActive(false);
 		}
 	}
 
@@ -137,10 +129,8 @@ public class PlayerJump : MonoBehaviour {
 			box.isTrigger = true;
 			morreu = true;
 			anim.enabled = false;
-			asaF.enabled = false;
 			if(cont == 0)
 			{
-				dead.SetActive(true);
 				cont = 1;
 			}
 		}
@@ -151,20 +141,16 @@ public class PlayerJump : MonoBehaviour {
 			morreu = true;
 			end = true;
 			anim.enabled = false;
-			asaF.enabled = false;
 			box.isTrigger = true;
 			Time.timeScale = 0;
 			if(cont == 0)
 			{
-				dead.SetActive(true);
 				cont = 1;
 			}
 			if(pontos > PlayerPrefs.GetInt("flappyS"))
 			{
 				PlayerPrefs.SetInt("flappyS", pontos);
 			}
-			image.SetActive(true);
-			texto.SetActive(false);
 		}
 	}
 }

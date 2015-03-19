@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Dead : MonoBehaviour 
 {
-	public PlayerJump morreu;
+	//public PlayerJump morreu;
 	public GameObject retry;
 	public GameObject menu;
 	public GameObject flash;
@@ -19,11 +19,11 @@ public class Dead : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(morreu.morreu)
+		if(PlayerJump.player.morreu)
 		{
 			flash.SetActive(true);
 		}
-		if(morreu.end)
+		if(PlayerJump.player.end)
 		{			
 			for(int i = 0; i < splash.Length; i++)
 			{

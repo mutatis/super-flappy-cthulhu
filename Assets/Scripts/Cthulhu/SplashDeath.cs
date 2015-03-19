@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SplashDeath : MonoBehaviour {
 	
-	public PlayerJump player;
+	//public PlayerJump player;
 	// Use this for initialization
 	void Start () {
 	
@@ -12,7 +12,7 @@ public class SplashDeath : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(PlayerJump.player != null)
-		transform.position = new Vector2 (player.transform.position.x, transform.position.y);
+			transform.position = new Vector2 (PlayerJump.player.transform.position.x, transform.position.y);
 	}
 
 	public void Desliga()

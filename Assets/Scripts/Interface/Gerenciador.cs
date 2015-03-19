@@ -5,6 +5,8 @@ public class Gerenciador : MonoBehaviour
 {
 	public GameObject[] tap;
 	public GameObject[] menu;
+	public GameObject[] dead;
+	public GameObject texto;
 
 	// Use this for initialization
 	void Start () 
@@ -30,5 +32,23 @@ public class Gerenciador : MonoBehaviour
 			PlayerPrefs.SetInt ("Retry", 0);
 			Application.Quit(); 
 		}
+		if(PlayerJump.player.morreu)
+		{
+			texto.SetActive(false);
+			for(int i = 0; i < dead.Length;i++)
+			{
+				dead[i].SetActive(true);
+			}
+		}
+	}
+
+	void OnApplicationQuit() 
+	{
+		PlayerPrefs.SetInt("Retry", 0);
+	}
+
+	void OnApplicationSuspend() 
+	{
+		PlayerPrefs.SetInt("Retry", 0);
 	}
 }
