@@ -4,11 +4,8 @@ using UnityEngine.UI;
 
 public class ImageFalppy : MonoBehaviour
 {
-	public GameObject bronze;
-	public GameObject prata;
-	public GameObject ouro;
-	public GameObject platina;
 	public GameObject[] texto;
+	public GameObject[] idolos;
 	bool vai;
 
 	// Use this for initialization
@@ -29,21 +26,29 @@ public class ImageFalppy : MonoBehaviour
 			else
 			{
 				transform.localPosition = new Vector3(0, 20, 0);
-				if(PlayerJump.player.pontos >= 10 && PlayerJump.player.pontos < 25)
+				if(PlayerJump.player.pontos >= 0 && PlayerJump.player.pontos < 10)
 				{
-					bronze.SetActive(true);
+					idolos[0].SetActive(true);
+				}
+				else if(PlayerJump.player.pontos >= 10 && PlayerJump.player.pontos < 25)
+				{
+					idolos[1].SetActive(true);
 				}
 				else if(PlayerJump.player.pontos >= 25 && PlayerJump.player.pontos < 50)
 				{
-					prata.SetActive(true);
+					idolos[2].SetActive(true);
 				}
 				else if(PlayerJump.player.pontos >= 50 && PlayerJump.player.pontos < 100)
 				{
-					ouro.SetActive(true);
+					idolos[3].SetActive(true);
 				}
-				else if(PlayerJump.player.pontos >= 100)
+				else if(PlayerJump.player.pontos >= 100 && PlayerJump.player.pontos < 150)
 				{
-					platina.SetActive(true);
+					idolos[4].SetActive(true);
+				}
+				else if(PlayerJump.player.pontos >= 150)
+				{
+					idolos[4].SetActive(true);
 				}
 				for(int i = 0; i < 2; i++)
 				{
