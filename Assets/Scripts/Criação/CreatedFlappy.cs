@@ -56,7 +56,6 @@ public class CreatedFlappy : MonoBehaviour {
 		else if(PlayerJump.player.pontos < 70)
 		{
 			Instantiate(flappy[6], new Vector3(62.142f, 16.914f, 0), Quaternion.identity);
-			Instantiate(flappy[10], new Vector3(71, 7.5f, 0), Quaternion.identity);
 		}
 		else if(PlayerJump.player.pontos < 80)
 		{
@@ -70,9 +69,13 @@ public class CreatedFlappy : MonoBehaviour {
 		{
 			Instantiate(flappy[9], new Vector3(62.142f, 22.914f, 0), Quaternion.identity);
 		}
-		else if(PlayerJump.player.pontos < 100)
+		else if(PlayerJump.player.pontos < 110)
 		{
 			Instantiate(flappy[11], new Vector3(70.142f, 22.914f, 0), Quaternion.identity);
+		}
+		else if(PlayerJump.player.pontos < 150)
+		{
+			Instantiate(flappy[10], new Vector3(62.142f, 21f, 0), Quaternion.identity);
 		}
 		po += 5;
 	}

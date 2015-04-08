@@ -19,6 +19,10 @@ public class MoventElder : MonoBehaviour
 		{
 			transform.Translate(0, velY, 0);
 		}
+		if(transform.position.x < 71)
+		{
+			transform.position = new Vector2(71, transform.position.y);
+		}
 	}
 
 	IEnumerator Go()
