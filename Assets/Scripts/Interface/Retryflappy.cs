@@ -9,6 +9,6 @@ public class Retryflappy : MonoBehaviour
 		PlayerPrefs.SetInt ("Retry", 2);
 		PlayerJump.player.morreu = false;
 		PlayerJump.player.end = false;
-		Application.LoadLevel ("muda");
+		Application.LoadLevel ("FlappyCthulhu");
 	}
 }
