@@ -9,6 +9,7 @@ public class Dead : MonoBehaviour
 	public GameObject flash;
 	public Animator[] splash;
 	public AudioClip[] audio;
+	public Blur blur;
 
 	// Use this for initialization
 	void Start ()
@@ -31,6 +32,7 @@ public class Dead : MonoBehaviour
 			}
 			retry.SetActive(true);
 			menu.SetActive(true);
+			blur.enabled = true;
 		}
 	}
 }
