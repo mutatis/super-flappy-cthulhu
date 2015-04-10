@@ -7,6 +7,7 @@ public class ImageFalppy : MonoBehaviour
 	public GameObject[] texto;
 	public GameObject[] idolos;
 	bool vai;
+	public int limit;
 
 	// Use this for initialization
 	void Start () 
@@ -19,13 +20,13 @@ public class ImageFalppy : MonoBehaviour
 	{
 		if(vai)
 		{
-			if(transform.localPosition.y < 18)
+			if(transform.localPosition.y < limit)
 			{
 				transform.localPosition = new Vector3 (0, transform.localPosition.y + 25, 0);
 			}
 			else
 			{
-				transform.localPosition = new Vector3(0, 20, 0);
+				transform.localPosition = new Vector3(0, limit, 0);
 				if(PlayerJump.player.pontos >= 0 && PlayerJump.player.pontos < 10)
 				{
 					idolos[0].SetActive(true);

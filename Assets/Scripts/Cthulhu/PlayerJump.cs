@@ -51,13 +51,15 @@ public class PlayerJump : MonoBehaviour {
 				//transform.Translate(0.2f, 0, 0);
 				if(rigidbody2D.velocity.y < 0)
 				{
-					if(transform.eulerAngles.z >= -87)
+					if(transform.eulerAngles.z >= 310)
 					{
-						transform.Rotate(0, 0, -4f);
+						//transform.eulerAngles = new Vector3(0, 0, 310);
+						transform.Rotate(0, 0, -5f);
 					}
 					else
 					{
-						transform.eulerAngles = new Vector3(0, 0, -87);
+						//transform.Rotate(0, 0, -5f);
+						transform.eulerAngles = new Vector3(0, 0, 300);
 					}
 				}
 				else if(rigidbody2D.velocity.y > 0)
