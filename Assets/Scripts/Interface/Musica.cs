@@ -31,8 +31,9 @@ public class Musica : MonoBehaviour
 	}
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		PlayerPrefs.SetInt ("Retry", 0);	
 	}
 	
 	// Update is called once per frame
