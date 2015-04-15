@@ -11,6 +11,7 @@ public class GerenciaPokemon : MonoBehaviour
 	public AudioClip[] CthulhuSound;
 	public GameObject[] menu;
 	public CanoPOkemon cano;
+	public MovmentMenu camera;
 	
 	// Use this for initialization
 	void Start () 
@@ -46,6 +47,7 @@ public class GerenciaPokemon : MonoBehaviour
 		yield return new WaitForSeconds(0.1f);
 		cthulhu.enabled = true;
 		AudioSource.PlayClipAtPoint(CthulhuSound[1], new Vector3(transform.position.x, transform.position.y, transform.position.z));
-		//		menu[0].SetActive(true);
+		camera.enabled = true;
+		menu[0].SetActive(true);
 	}
 }
