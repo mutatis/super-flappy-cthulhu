@@ -21,6 +21,10 @@ public class Dead : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if(PlayerJump.player.morreu && PlayerJump.player.end == false)
+		{
+			Time.timeScale = 1;
+		}
 		if(PlayerJump.player.morreu)
 		{
 			flash.SetActive(true);

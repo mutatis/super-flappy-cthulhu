@@ -9,7 +9,7 @@ public class ManagerCamera : MonoBehaviour
 
 	void Awake()
 	{
-		Time.timeScale = 0;
+		//Time.timeScale = 0;
 	}
 
 	// Use this for initialization

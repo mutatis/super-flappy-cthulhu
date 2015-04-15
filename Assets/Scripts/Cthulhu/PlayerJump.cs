@@ -40,6 +40,7 @@ public class PlayerJump : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		Debug.Log(Time.timeScale);
 		if(morreu == false)
 		{
 			if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
@@ -98,6 +99,7 @@ public class PlayerJump : MonoBehaviour {
 			{
 				cont = 1;
 			}
+			Time.timeScale = 1;
 		}
 		if(collision.gameObject.tag == "Ground")
 		{			
@@ -138,6 +140,7 @@ public class PlayerJump : MonoBehaviour {
 			{
 				cont = 1;
 			}
+			Time.timeScale = 1;
 		}
 		if(other.gameObject.tag == "Ground")
 		{

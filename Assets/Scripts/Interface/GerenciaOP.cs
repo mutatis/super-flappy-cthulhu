@@ -11,6 +11,7 @@ public class GerenciaOP : MonoBehaviour
 	public Animator cthulhu;
 	public AudioClip[] CthulhuSound;
 	public GameObject[] menu;
+	public MovmentMenu camera;
 
 	// Use this for initialization
 	void Start () 
@@ -32,7 +33,7 @@ public class GerenciaOP : MonoBehaviour
 			street[i].StopCoroutine("GO");
 		}
 		perso[1].sprite = muda[1];
-		posPerso[1].position = new Vector2(posPerso[1].position.x - 2, posPerso[1].position.y + 2);
+		posPerso[1].position = new Vector3(posPerso[1].position.x - 2, posPerso[1].position.y + 2, 0);
 		//posPerso[1].position = new Vector2(8.1f, -5.4f);
 		//yield return new WaitForSeconds(0.3f);
 		//posPerso[1].position = new Vector2(64.6f, 3.9f);
@@ -42,6 +43,8 @@ public class GerenciaOP : MonoBehaviour
 		yield return new WaitForSeconds(0.1f);
 		cthulhu.enabled = true;
 		AudioSource.PlayClipAtPoint(CthulhuSound[1], new Vector3(transform.position.x, transform.position.y, transform.position.z));
-//		menu[0].SetActive(true);
+		menu[0].SetActive(true);
+		camera.enabled = true;
+		menu[1].SetActive(false);
 	}
 }

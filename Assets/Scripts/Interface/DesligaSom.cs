@@ -7,6 +7,7 @@ public class DesligaSom : MonoBehaviour
 
 	void Start()
 	{
+		Time.timeScale = 0;
 		if(PlayerPrefs.GetInt("ONOFF") == 0)
 		{
 			x.SetActive(false);

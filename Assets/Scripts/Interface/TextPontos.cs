@@ -6,9 +6,14 @@ public class TextPontos : MonoBehaviour
 {
 	float pon;
 	Text text;
+	float soma = 0.1f;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+#if UNITY_IOS
+		soma *= 2;
+#endif
 		text = GetComponent<Text>();
 	}
 	

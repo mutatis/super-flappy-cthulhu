@@ -10,7 +10,7 @@ public class MoventElder : MonoBehaviour
 	void Start () 
 	{
 		StartCoroutine("Go");
-		Time.timeScale = 1;
+		//Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame

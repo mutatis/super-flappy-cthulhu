@@ -8,10 +8,14 @@ public class ImageFalppy : MonoBehaviour
 	public GameObject[] idolos;
 	bool vai;
 	public int limit;
+	int num = 25;
 
 	// Use this for initialization
 	void Start () 
 	{
+#if UNITY_IOS
+		num *= 2;
+#endif
 		StartCoroutine("Go");
 	}
 	
@@ -22,7 +26,7 @@ public class ImageFalppy : MonoBehaviour
 		{
 			if(transform.localPosition.y < limit)
 			{
-				transform.localPosition = new Vector3 (0, transform.localPosition.y + 25, 0);
+				transform.localPosition = new Vector3 (0, transform.localPosition.y + num, 0);
 			}
 			else
 			{
