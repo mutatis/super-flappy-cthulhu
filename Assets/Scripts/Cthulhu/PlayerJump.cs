@@ -55,7 +55,7 @@ public class PlayerJump : MonoBehaviour {
 				//transform.Translate(0.2f, 0, 0);
 				if(rigidbody2D.velocity.y < 0)
 				{
-					if(transform.eulerAngles.z <= 300 || transform.eulerAngles.z >= 310)
+					if(transform.eulerAngles.z <= 290 || transform.eulerAngles.z >= 300)
 					{
 						//transform.eulerAngles = new Vector3(0, 0, 310);
 						transform.Rotate(0, 0, -4f);
