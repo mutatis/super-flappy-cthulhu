@@ -47,6 +47,7 @@ public class GerenciaPokemon : MonoBehaviour
 		yield return new WaitForSeconds(0.1f);
 		cthulhu.enabled = true;
 		AudioSource.PlayClipAtPoint(CthulhuSound[1], new Vector3(transform.position.x, transform.position.y, transform.position.z));
+		yield return new WaitForSeconds(1.5f);
 		camera.enabled = true;
 		menu[0].SetActive(true);
 	}

@@ -16,5 +16,6 @@ public class Inicio : MonoBehaviour
 		camera.enabled = true;
 		gameObject.SetActive (false);
 		PlayerPrefs.SetInt("Cthulhu", num);
+		PlayerPrefs.SetInt("Musica", 1);
 	}
 }

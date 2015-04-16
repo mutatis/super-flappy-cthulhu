@@ -5,6 +5,8 @@ public class Musica : MonoBehaviour
 {
 	public AudioSource audio;
 	private static Musica s_gameManager;
+	public int tipo;
+	bool ok;
 
 	public static Musica gameManager
 	{
@@ -33,7 +35,8 @@ public class Musica : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		PlayerPrefs.SetInt ("Retry", 0);	
+		PlayerPrefs.SetInt ("Retry", 0);
+		PlayerPrefs.SetInt("Musica", 0);
 	}
 	
 	// Update is called once per frame
@@ -46,6 +49,20 @@ public class Musica : MonoBehaviour
 		else
 		{
 			audio.enabled = false;
+		}
+		if(PlayerPrefs.GetInt("Musica") == 1 && tipo == 0)
+		{
+			audio.volume -= 0.02f;
+		}
+		else if(PlayerPrefs.GetInt("Musica") == 1 && tipo == 1)
+		{
+			if(ok == false && Time.timeScale == 1)
+			{
+				audio.playOnAwake = true;
+				audio.Play();
+				ok = true;
+			}
+			audio.volume = 1f;
 		}
 	}
 }
