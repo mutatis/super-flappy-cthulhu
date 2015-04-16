@@ -44,17 +44,17 @@ public class ImageFalppy : MonoBehaviour
 				{
 					idolos[2].SetActive(true);
 				}
-				else if(PlayerJump.player.pontos >= 50 && PlayerJump.player.pontos < 100)
+				else if(PlayerJump.player.pontos >= 50 && PlayerJump.player.pontos < 70)
 				{
 					idolos[3].SetActive(true);
 				}
-				else if(PlayerJump.player.pontos >= 100 && PlayerJump.player.pontos < 150)
+				else if(PlayerJump.player.pontos >= 70 && PlayerJump.player.pontos < 110)
 				{
 					idolos[4].SetActive(true);
 				}
-				else if(PlayerJump.player.pontos >= 150)
+				else if(PlayerJump.player.pontos >= 110)
 				{
-					idolos[4].SetActive(true);
+					idolos[5].SetActive(true);
 				}
 				for(int i = 0; i < 2; i++)
 				{
