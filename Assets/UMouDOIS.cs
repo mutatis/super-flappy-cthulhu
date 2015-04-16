@@ -8,8 +8,19 @@ public class UMouDOIS : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		if(PlayerPrefs.GetInt("OBJ") >= 2)
+		{
+			PlayerPrefs.SetInt("OBJ", 0);
+		}
+		else
+		{
+			PlayerPrefs.SetInt("OBJ", (PlayerPrefs.GetInt("OBJ") + 1));
+		}
+		Debug.Log(PlayerPrefs.GetInt("OBJ"));
 		if(PlayerPrefs.GetInt("Retry") != 2)
-			obj[Random.Range(0, obj.Length)].SetActive(true);
+		{
+			obj[PlayerPrefs.GetInt("OBJ")].SetActive(true);
+		}
 	}
 	
 	// Update is called once per frame
