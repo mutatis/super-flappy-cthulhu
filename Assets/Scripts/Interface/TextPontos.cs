@@ -32,6 +32,13 @@ public class TextPontos : MonoBehaviour
 			
 			});
 		}
+		if(Input.GetMouseButtonDown(0))
+		{
+			pon = PlayerJump.player.pontos;
+			Social.ReportScore(PlayerJump.player.pontos, "CgkIsZ6ut68TEAIQAA", (bool success) => {
+				
+			});
+		}
 		text.text = ""+ (int)pon;
 	}
 }
