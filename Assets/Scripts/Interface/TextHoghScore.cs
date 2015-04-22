@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class TextHoghScore : MonoBehaviour {

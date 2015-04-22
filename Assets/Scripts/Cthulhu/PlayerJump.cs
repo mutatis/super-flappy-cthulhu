@@ -21,6 +21,7 @@ public class PlayerJump : MonoBehaviour {
 	public AudioClip afogamento;
 	public Animator anim;
 	int num;
+	float rot = -0.5f;
 
 	void Awake()
 	{
@@ -58,7 +59,8 @@ public class PlayerJump : MonoBehaviour {
 					if(transform.eulerAngles.z <= 290 || transform.eulerAngles.z >= 300)
 					{
 						//transform.eulerAngles = new Vector3(0, 0, 310);
-						transform.Rotate(0, 0, -4f);
+						transform.Rotate(0, 0, rot);
+						StartCoroutine("Roda");
 					}
 					else
 					{
@@ -68,6 +70,7 @@ public class PlayerJump : MonoBehaviour {
 				}
 				else if(rigidbody2D.velocity.y > 0)
 				{
+					rot = -0.5f;
 					if(transform.eulerAngles.z <= 19)
 					{
 						transform.Rotate(0, 0, 0.5f);
@@ -82,6 +85,19 @@ public class PlayerJump : MonoBehaviour {
 		if(morreu && end)
 		{
 			transform.position = new Vector2(transform.position.x, transform.position.y - 1);
+		}
+	}
+
+	IEnumerator Roda()
+	{
+		yield return new WaitForSeconds(0.05f);
+		if(rot > -4)
+		{
+			rot -= 0.5f;
+		}
+		else
+		{
+			StopCoroutine("Roda");
 		}
 	}
 

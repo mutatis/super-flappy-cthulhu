@@ -2,63 +2,48 @@
 using System.Collections;
 using GooglePlayGames;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.UI;
+
 public class GPGDemo : MonoBehaviour
 {
-	#region Public_Vars
-	public string leaderboard;
-	#endregion
-	#region Ui_Callbacks
-	///
-	
-	/// Login In Into Your Google+ Account
-	/// </summary>
-	public void LogIn()
+	public Text text;
+
+	void Start()
 	{
-		Social.localUser.Authenticate((bool success) =>
-		                              {
-			if (success)
+		PlayGamesPlatform.Activate();
+		Social.localUser.Authenticate((bool success) => {
+			// handle success or failure
+			if(success)
 			{
-				Debug.Log("Login Sucess");
-			}
-			else
-			{
-				Debug.Log("Login failed");
+				text.text = "Logo";
 			}
 		});
 	}
-	/// <summary>
-	/// Shows All Available Leaderborad
-	/// </summary>
-	public void OnShowLeaderBoard()
+
+	public void Loggin()
+	{
+		Social.localUser.Authenticate((bool success) => {
+			// handle success or failure
+			if(success)
+			{
+				text.text = "Logo";
+			}
+		});
+	}
+
+	public void Lead()
+	{
+		Social.ReportScore(55, "CgkIsZ6ut68TEAIQAA", (bool success) => {
+			if(success)
+			{
+				text.text = "FOI";
+			}
+		});
+	}
+
+	public void Show()
 	{
 		Social.ShowLeaderboardUI();
+		//PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIsZ6ut68TEAIQAA");
 	}
-	/// <summary>
-	/// Adds Score To leader board
-	/// </summary>
-	public void OnAddScoreToLeaderBorad()
-	{
-		if (Social.localUser.authenticated)
-		{
-			Social.ReportScore(5000, leaderboard, (bool success) =>
-			                   {
-				if (success)
-				{
-					((PlayGamesPlatform)Social.Active).ShowLeaderboardUI(leaderboard);
-				}
-				else
-				{
-					Debug.Log("Add Score Fail");
-				}
-			});
-		}
-	}
-	/// <summary>
-	/// On Logout of your Google+ Account
-	/// </summary>
-	public void OnLogOut()
-	{
-		((PlayGamesPlatform)Social.Active).SignOut();
-	}
-	#endregion
 }

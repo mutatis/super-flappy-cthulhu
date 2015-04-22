@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class TextPontos : MonoBehaviour 
@@ -26,6 +28,9 @@ public class TextPontos : MonoBehaviour
 		else
 		{
 			pon = PlayerJump.player.pontos;
+			Social.ReportScore(PlayerJump.player.pontos, "CgkIsZ6ut68TEAIQAA", (bool success) => {
+			
+			});
 		}
 		text.text = ""+ (int)pon;
 	}
