@@ -18,7 +18,7 @@ public class MoventElder : MonoBehaviour
 	{
 		if(Time.timeScale == 1)
 		{
-			transform.Translate(0, velY, 0);
+			transform.Translate(0, velY * Time.deltaTime, 0);
 		}
 		if(transform.position.x < 71)
 		{

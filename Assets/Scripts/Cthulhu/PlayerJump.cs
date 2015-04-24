@@ -31,9 +31,6 @@ public class PlayerJump : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-#if UNITY_IOS
-		vel *= 2;
-#endif
 		pontos = PlayerPrefs.GetInt ("Pontos");
 		Screen.orientation = ScreenOrientation.Portrait;
 	}

@@ -17,7 +17,7 @@ public class Raio : MonoBehaviour {
 	{
 		if(transform.position.x > limitX)
 		{
-			transform.Translate(velX, 0, 0);
+			transform.Translate(velX * Time.deltaTime, 0, 0);
 		}
 	}
 

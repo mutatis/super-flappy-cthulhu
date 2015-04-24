@@ -9,13 +9,13 @@ public class TextPontos : MonoBehaviour
 	float pon;
 	Text text;
 	float soma = 0.1f;
-
+	
 	// Use this for initialization
 	void Start () 
 	{
-#if UNITY_IOS
+		#if UNITY_IOS
 		soma *= 2;
-#endif
+		#endif
 		text = GetComponent<Text>();
 	}
 	
@@ -29,7 +29,7 @@ public class TextPontos : MonoBehaviour
 		{
 			pon = PlayerJump.player.pontos;
 			Social.ReportScore(PlayerJump.player.pontos, "CgkIsZ6ut68TEAIQAA", (bool success) => {
-			
+				
 			});
 		}
 		if(Input.GetMouseButtonDown(0))

@@ -14,6 +14,7 @@ public class MovmentMenu : MonoBehaviour {
 	public GameObject[] desliga;
 	bool vai;
 	public MovmentMenu ca;
+	public float tem;
 	//public Transform camera;
 
 	// Use this for initialization
@@ -57,6 +58,11 @@ public class MovmentMenu : MonoBehaviour {
 		{
 			camera.position = new Vector3(transform.position.x, num2, 0);
 		}*/
+		if(tem > 0)
+		{
+			num4 *= tem;
+			tem = 0;
+		}
 		if(vai == false)
 		{
 			if(transform.position.y  < num && num2 == 1)

@@ -20,7 +20,7 @@ public class Fireball : MonoBehaviour
 	{
 		if(Time.timeScale == 1)
 		{
-			transform.Translate(velX, 0, 0);
+			transform.Translate(velX * Time.deltaTime, 0, 0);
 		}
 	}
 }

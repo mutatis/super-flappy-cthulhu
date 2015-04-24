@@ -25,7 +25,7 @@ public class ImageFalppy : MonoBehaviour
 		transform.position = new Vector3(transform.position.x, transform.position.y, 200);
 		if(vai)
 		{
-			if(transform.localPosition.y < limit)
+			if(transform.localPosition.y < limit - 2)
 			{
 				transform.localPosition = new Vector3 (0, transform.localPosition.y + num, 0);
 			}

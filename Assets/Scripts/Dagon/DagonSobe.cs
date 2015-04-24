@@ -22,11 +22,11 @@ public class DagonSobe : MonoBehaviour
 	{
 		if(va && transform.position.y > y.position.y && tipo == 1)
 		{
-			transform.Translate(0, vel, 0);
+			transform.Translate(0, vel * Time.deltaTime, 0);
 		}	
 		if(va && transform.position.y < y.position.y && tipo == 0)
 		{
-			transform.Translate(0, vel, 0);
+			transform.Translate(0, vel * Time.deltaTime, 0);
 		}	
 		if(sai && PlayerJump.player.pontos == 57)
 		{
