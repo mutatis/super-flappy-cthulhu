@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: c4fab9114d783b546b09e818583d391c
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: mar_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,6 +43,16 @@ TextureImporter:
   textureType: 5
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: mar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
