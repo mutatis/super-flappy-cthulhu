@@ -38,7 +38,6 @@ public class PlayerJump : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log(Time.timeScale);
 		if(morreu == false)
 		{
 			if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
