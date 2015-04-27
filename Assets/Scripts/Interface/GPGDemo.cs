@@ -16,9 +16,9 @@ public class GPGDemo : MonoBehaviour
 	void Start()
 	{
 		PlayGamesPlatform.Activate();
-		Social.localUser.Authenticate((bool success) => {
+		/*Social.localUser.Authenticate((bool success) => {
 			// handle success or failure
-		});
+		});*/
 	}
 	
 	/// Login In Into Your Google+ Account
@@ -32,7 +32,23 @@ public class GPGDemo : MonoBehaviour
 	/// </summary>
 	public void OnShowLeaderBoard()
 	{
-		Social.ShowLeaderboardUI();
+		if(PlayerPrefs.GetInt("Logo") == 1)
+		{
+			Social.ShowLeaderboardUI();
+		}
+		else
+		{
+			Social.localUser.Authenticate((bool success) => {
+				if(success)
+				{
+					PlayerPrefs.SetInt("Logo", 1);
+				}
+				else
+				{
+					PlayerPrefs.SetInt("Logo", 0);
+				}
+			});
+		}
 	}
 	/// <summary>
 	/// Adds Score To leader board

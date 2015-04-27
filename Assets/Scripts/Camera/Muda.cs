@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.SocialPlatforms.GameCenter;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
+using GooglePlayGames;
 
 public class Muda : MonoBehaviour {
 
@@ -10,6 +11,17 @@ public class Muda : MonoBehaviour {
 	void Start () {
 		GameCenterPlatform.ShowDefaultAchievementCompletionBanner (true);
 		Social.localUser.Authenticate(Process);
+		PlayGamesPlatform.Activate();
+		Social.localUser.Authenticate((bool success) => {
+			if(success)
+			{
+				PlayerPrefs.SetInt("Logo", 1);
+			}
+			else
+			{
+				PlayerPrefs.SetInt("Logo", 0);
+			}
+		});
 		Application.LoadLevel ("FlappyCthulhu");
 	}
 	

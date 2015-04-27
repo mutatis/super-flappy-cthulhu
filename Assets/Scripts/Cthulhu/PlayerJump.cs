@@ -140,7 +140,8 @@ public class PlayerJump : MonoBehaviour {
 		if(other.gameObject.tag == "Ponto")
 		{
 			AudioSource.PlayClipAtPoint(point, new Vector3(transform.position.x, transform.position.y, transform.position.z));
-			pontos ++;
+			if(!morreu || !end)
+				pontos ++;
 			Destroy(other.gameObject);
 		}
 		if(other.gameObject.tag == "Enemy")
