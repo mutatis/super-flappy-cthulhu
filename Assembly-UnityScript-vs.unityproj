@@ -59,6 +59,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt-rBR\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sl\common_strings.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Sprites-Default-Mask.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-et-rEE\common_strings.xml" />
      <None Include="Assets\Textured Text Shader.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\README.txt" />
