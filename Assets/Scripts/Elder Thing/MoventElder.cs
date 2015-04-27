@@ -4,7 +4,8 @@ using System.Collections;
 public class MoventElder : MonoBehaviour 
 {
 	public float tempo;
-	public float velY;
+	public float velY = 6;
+	bool oi;
 
 	// Use this for initialization
 	void Start () 
@@ -16,6 +17,14 @@ public class MoventElder : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if(oi)
+		{
+			velY = -6;
+		}
+		else
+		{
+			velY = 6;
+		}
 		if(Time.timeScale == 1)
 		{
 			transform.Translate(0, velY * Time.deltaTime, 0);
@@ -29,7 +38,7 @@ public class MoventElder : MonoBehaviour
 	IEnumerator Go()
 	{
 		yield return new WaitForSeconds (tempo);
-		velY *= -1;
+		oi = !oi;
 		StartCoroutine("Go");
 	}
 }
