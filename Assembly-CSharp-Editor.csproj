@@ -62,8 +62,6 @@
      <Compile Include="Assets\GooglePlayGames\Editor\GPGSUpgrader.cs" />
      <Compile Include="Assets\GooglePlayGames\Editor\GPGSUtil.cs" />
      <Compile Include="Assets\GooglePlayGames\Editor\PlistBuddyHelper.cs" />
-     <Compile Include="Assets\LeviMoore\PlayerPrefs Overview\Editor\PlayerPrefsOverview.cs" />
-     <Compile Include="Assets\LeviMoore\PlayerPrefs Overview\Editor\Plist.cs" />
      <None Include="Assets\CubicPilot_4.6\Resources\Level4.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\drawable\common_signin_btn_icon_light.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sw\common_strings.xml" />
@@ -223,7 +221,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values\version.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
-     <None Include="Assets\LeviMoore\NeedHelp.txt" />
+     <None Include="Assets\Plugins\LeviMoore\NeedHelp.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\AndroidManifest.xml" />

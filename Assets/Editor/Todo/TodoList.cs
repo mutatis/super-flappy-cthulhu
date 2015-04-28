@@ -160,7 +160,7 @@ public class TodoList : EditorWindow
 		EditorGUILayout.LabelField("Create Task:", EditorStyles.boldLabel);
 		_newTaskOwnerIndex  = EditorGUILayout.Popup(_newTaskOwnerIndex, ownersToSelect,GUILayout.Width(60));
 		EditorGUILayout.EndHorizontal();
-		_newTask = EditorGUILayout.TextField(_newTask, GUILayout.Height(40));
+		_newTask = EditorGUILayout.TextField(_newTask, GUILayout.Height(100));
 		if( ( GUILayout.Button("Create Task") && _newTask != "" ) )
 		{
 			// create new task
