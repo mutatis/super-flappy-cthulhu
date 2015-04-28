@@ -10,8 +10,7 @@ public class Inicio : MonoBehaviour
 
 	public void Comeca()
 	{
-		num = 5;
-			//Random.Range(0, inicio.Length);
+		num = Random.Range(0, inicio.Length);
 		Instantiate(inicio[num], new Vector3(57.954f, 12.912f, 0), Quaternion.identity);
 		tap.SetActive (true);
 		camera.enabled = true;
