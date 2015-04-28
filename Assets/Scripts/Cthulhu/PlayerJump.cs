@@ -22,6 +22,7 @@ public class PlayerJump : MonoBehaviour {
 	public Animator anim;
 	int num;
 	float rot = -0.5f;
+	bool dagon;
 
 	void Awake()
 	{
@@ -112,6 +113,7 @@ public class PlayerJump : MonoBehaviour {
 				cont = 1;
 			}
 			Time.timeScale = 1;
+			dagon = true;
 		}
 		if(collision.gameObject.tag == "Ground")
 		{			
@@ -145,6 +147,25 @@ public class PlayerJump : MonoBehaviour {
 		}
 		if(other.gameObject.tag == "Enemy")
 		{
+			if(!dagon)
+			{
+				vel = 0;
+				AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+				morreu = true;
+				anim.enabled = false;
+				box.isTrigger = true;
+				transform.eulerAngles = new Vector3(0, 0, -87);
+				if(cont == 0)
+				{
+					cont = 1;
+				}
+				Time.timeScale = 1;
+				dagon = true;
+			}
+		}
+		/*if(other.gameObject.tag == "Enemy")
+		{
+			AudioSource.PlayClipAtPoint(death, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
 			box.isTrigger = true;
 			morreu = true;
@@ -154,7 +175,7 @@ public class PlayerJump : MonoBehaviour {
 				cont = 1;
 			}
 			Time.timeScale = 1;
-		}
+		}*/
 		if(other.gameObject.tag == "Ground")
 		{
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));

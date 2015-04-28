@@ -62,7 +62,10 @@ public class Musica : MonoBehaviour
 				audio.Play();
 				ok = true;
 			}
-			audio.volume = 1f;
+			if(ok)
+			{
+				audio.volume += 0.02f;
+			}
 		}
 	}
 }
