@@ -48,34 +48,31 @@ public class PlayerJump : MonoBehaviour {
 				AudioSource.PlayClipAtPoint(asa, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 				//rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
 			}
-			if(Time.timeScale != 0)
+			//transform.Translate(0.2f, 0, 0);
+			if(rigidbody2D.velocity.y < 0)
 			{
-				//transform.Translate(0.2f, 0, 0);
-				if(rigidbody2D.velocity.y < 0)
+				if(transform.eulerAngles.z <= 290 || transform.eulerAngles.z >= 300)
 				{
-					if(transform.eulerAngles.z <= 290 || transform.eulerAngles.z >= 300)
-					{
-						//transform.eulerAngles = new Vector3(0, 0, 310);
-						transform.Rotate(0, 0, rot);
-						StartCoroutine("Roda");
-					}
-					else
-					{
-						//transform.Rotate(0, 0, -5f);
-						//transform.eulerAngles = new Vector3(0, 0, 300);
-					}
+					//transform.eulerAngles = new Vector3(0, 0, 310);
+					transform.Rotate(0, 0, rot);
+					StartCoroutine("Roda");
 				}
-				else if(rigidbody2D.velocity.y > 0)
+				else
 				{
-					rot = -0.5f;
-					if(transform.eulerAngles.z <= 19)
-					{
-						transform.Rotate(0, 0, 0.5f);
-					}
-					else
-					{
-						transform.eulerAngles = new Vector3(0, 0, 19);
-					}
+					//transform.Rotate(0, 0, -5f);
+					//transform.eulerAngles = new Vector3(0, 0, 300);
+				}
+			}
+			else if(rigidbody2D.velocity.y > 0)
+			{
+				rot = -0.5f;
+				if(transform.eulerAngles.z <= 19)
+				{
+					transform.Rotate(0, 0, 0.5f);
+				}
+				else
+				{
+					transform.eulerAngles = new Vector3(0, 0, 19);
 				}
 			}
 		}
@@ -115,7 +112,7 @@ public class PlayerJump : MonoBehaviour {
 			Time.timeScale = 1;
 			dagon = true;
 		}
-		if(collision.gameObject.tag == "Ground")
+		else if(collision.gameObject.tag == "Ground")
 		{			
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
@@ -145,7 +142,7 @@ public class PlayerJump : MonoBehaviour {
 				pontos ++;
 			Destroy(other.gameObject);
 		}
-		if(other.gameObject.tag == "Enemy")
+		else if(other.gameObject.tag == "Enemy")
 		{
 			if(!dagon)
 			{
@@ -176,7 +173,7 @@ public class PlayerJump : MonoBehaviour {
 			}
 			Time.timeScale = 1;
 		}*/
-		if(other.gameObject.tag == "Ground")
+		else if(other.gameObject.tag == "Ground")
 		{
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;

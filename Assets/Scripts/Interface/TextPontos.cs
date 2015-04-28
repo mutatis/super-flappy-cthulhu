@@ -9,7 +9,9 @@ public class TextPontos : MonoBehaviour
 	float pon;
 	Text text;
 	float soma = 0.1f;
-	
+	public AudioSource audios;
+	public AudioClip bate;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -27,6 +29,8 @@ public class TextPontos : MonoBehaviour
 		}
 		else
 		{
+			AudioSource.PlayClipAtPoint(bate, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			audios.Stop();
 			pon = PlayerJump.player.pontos;
 			Social.ReportScore(PlayerJump.player.pontos, "CgkIsZ6ut68TEAIQAA", (bool success) => {
 				
@@ -34,6 +38,8 @@ public class TextPontos : MonoBehaviour
 		}
 		if(Input.GetMouseButtonDown(0))
 		{
+			AudioSource.PlayClipAtPoint(bate, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			audios.Stop();
 			pon = PlayerJump.player.pontos;
 			Social.ReportScore(PlayerJump.player.pontos, "CgkIsZ6ut68TEAIQAA", (bool success) => {
 				

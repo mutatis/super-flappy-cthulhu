@@ -31,7 +31,7 @@ public class TodoList : EditorWindow
 		_window.title = "Todo List";
 		_window.autoRepaintOnSceneChange = false;
     }
-    
+
 	public void OnGUI ()
 	{	
 		// Create our data if we have none.
@@ -160,8 +160,8 @@ public class TodoList : EditorWindow
 		EditorGUILayout.LabelField("Create Task:", EditorStyles.boldLabel);
 		_newTaskOwnerIndex  = EditorGUILayout.Popup(_newTaskOwnerIndex, ownersToSelect,GUILayout.Width(60));
 		EditorGUILayout.EndHorizontal();
-		_newTask = EditorGUILayout.TextField(_newTask, GUILayout.Height(100));
-		if( ( GUILayout.Button("Create Task") && _newTask != "" ) )
+		_newTask = EditorGUILayout.TextField(_newTask, GUILayout.Height(50));
+		if(((GUILayout.Button("Create Task")) && _newTask != "" ))
 		{
 			// create new task
 			ListItemOwner newOwner = _listData.owners[_newTaskOwnerIndex];
