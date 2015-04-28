@@ -188,6 +188,7 @@
      <Compile Include="Assets\Scripts\Camera\TimeCamera.cs" />
      <Compile Include="Assets\Scripts\Cano\Cano.cs" />
      <Compile Include="Assets\Scripts\Cano\Cano1.cs" />
+     <Compile Include="Assets\Scripts\Cano\CanoDaiagonalParado.cs" />
      <Compile Include="Assets\Scripts\Cano\CanoPOkemon.cs" />
      <Compile Include="Assets\Scripts\Cano\EntradaEspecial.cs" />
      <Compile Include="Assets\Scripts\Cano\Mexe.cs" />
@@ -246,9 +247,9 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-pt-rBR\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sl\common_strings.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
-     <None Include="Assets\Sprites-Default-Mask.shader" />
+     <None Include="Assets\Shader\Sprites-Default-Mask.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-et-rEE\common_strings.xml" />
-     <None Include="Assets\Textured Text Shader.shader" />
+     <None Include="Assets\Shader\Textured Text Shader.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\README.txt" />
      <None Include="Assets\CubicPilot_4.6\Resources\Level9.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-eu-rES\common_strings.xml" />
@@ -345,7 +346,7 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-es\wallet_strings.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-lt\common_strings.xml" />
-     <None Include="Assets\README.txt" />
+     <None Include="Assets\Read\README.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\drawable\common_signin_btn_text_dark.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
