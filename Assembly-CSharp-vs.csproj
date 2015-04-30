@@ -79,7 +79,6 @@
      <Compile Include="Assets\CubicPilot_4.6\UtilCode\Gu.cs" />
      <Compile Include="Assets\CubicPilot_4.6\UtilCode\SmoothValue.cs" />
      <Compile Include="Assets\CubicPilot_4.6\UtilCode\Util.cs" />
-     <Compile Include="Assets\DesligaRaio.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\Achievement.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\DummyClient.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\IPlayGamesClient.cs" />
@@ -181,6 +180,7 @@
      <Compile Include="Assets\GooglePlayGames\Platforms\PlayGamesClientFactory.cs" />
      <Compile Include="Assets\GooglePlayGames\PluginVersion.cs" />
      <Compile Include="Assets\Material\RendererLayer.cs" />
+     <Compile Include="Assets\Mexecaninho.cs" />
      <Compile Include="Assets\Scripts\Background\DayNight.cs" />
      <Compile Include="Assets\Scripts\Background\DestroyEnemy.cs" />
      <Compile Include="Assets\Scripts\Background\Inicio.cs" />
@@ -208,12 +208,15 @@
      <Compile Include="Assets\Scripts\Cthulhu\PlayerJump.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\SplashDeath.cs" />
      <Compile Include="Assets\Scripts\Cthulhu\StreetCthulhu.cs" />
+     <Compile Include="Assets\Scripts\Cthulhu\VideoCthulhu.cs" />
      <Compile Include="Assets\Scripts\Dagon\DagonSobe.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Attack\Fireball.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Attack\Raio.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\AttackElder.cs" />
+     <Compile Include="Assets\Scripts\Elder Thing\DesligaRaio.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\MoventElder.cs" />
      <Compile Include="Assets\Scripts\Elder Thing\Segueoutro.cs" />
+     <Compile Include="Assets\Scripts\Elder Thing\elderSound.cs" />
      <Compile Include="Assets\Scripts\Interface\ControlaSeilaOq.cs" />
      <Compile Include="Assets\Scripts\Interface\DesligaAnim.cs" />
      <Compile Include="Assets\Scripts\Interface\DesligaOP.cs" />
@@ -238,7 +241,6 @@
      <Compile Include="Assets\Scripts\UnityAnalyticsIntegration.cs" />
      <Compile Include="Assets\Sprite Test\AnimatedSprite.cs" />
      <Compile Include="Assets\Sprite Test\AnimatedSprite_test.cs" />
-     <Compile Include="Assets\elderSound.cs" />
      <None Include="Assets\CubicPilot_4.6\Resources\Level4.txt" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\drawable\common_signin_btn_icon_light.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-sw\common_strings.xml" />
@@ -398,7 +400,6 @@
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values\version.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
-     <None Include="Assets\Plugins\LeviMoore\NeedHelp.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\AndroidManifest.xml" />

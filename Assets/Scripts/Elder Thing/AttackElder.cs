@@ -9,7 +9,9 @@ public class AttackElder : MonoBehaviour
 	public float time;
 	public Animator[] anim;
 	public MoventElder eld;
+	public Transform[] elde;
 	int tiro;
+	bool igual;
 
 	// Use this for initialization
 	void Start () 
@@ -21,7 +23,13 @@ public class AttackElder : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		if(igual)
+		{
+			for(int i = 0; i < elde.Length; i++)
+			{
+				elde[i].position = transform.position;
+			}
+		}
 	}
 
 	IEnumerator Go()
@@ -55,12 +63,14 @@ public class AttackElder : MonoBehaviour
 		{
 			anim[i].SetTrigger("Sai");
 		}
+		igual = false;
 		StopCoroutine("Va");
 	}
 
 	public void Raio()
 	{
-		Instantiate(raio, new Vector3(63, transform.position.y, transform.position.z), Quaternion.identity);
+		Instantiate(raio, new Vector3(64, transform.position.y, transform.position.z), Quaternion.identity);
+		igual = true;
 		StartCoroutine("Va");
 		eld.StartCoroutine("Va");
 	}
