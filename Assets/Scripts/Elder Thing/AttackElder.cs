@@ -8,6 +8,7 @@ public class AttackElder : MonoBehaviour
 	public float[] tempo;
 	public float time;
 	public Animator[] anim;
+	public MoventElder eld;
 	int tiro;
 
 	// Use this for initialization
@@ -47,9 +48,21 @@ public class AttackElder : MonoBehaviour
 		StartCoroutine("Go");
 	}
 
+	IEnumerator Va()
+	{
+		yield return new WaitForSeconds(2);
+		for(int i = 0; i < anim.Length; i++)
+		{
+			anim[i].SetTrigger("Sai");
+		}
+		StopCoroutine("Va");
+	}
+
 	public void Raio()
 	{
-		Instantiate(raio, new Vector3(81, transform.position.y, transform.position.z), Quaternion.identity);
+		Instantiate(raio, new Vector3(63, transform.position.y, transform.position.z), Quaternion.identity);
+		StartCoroutine("Va");
+		eld.StartCoroutine("Va");
 	}
 
 	public void Firaball()

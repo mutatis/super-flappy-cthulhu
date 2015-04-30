@@ -79,6 +79,7 @@
      <Compile Include="Assets\CubicPilot_4.6\UtilCode\Gu.cs" />
      <Compile Include="Assets\CubicPilot_4.6\UtilCode\SmoothValue.cs" />
      <Compile Include="Assets\CubicPilot_4.6\UtilCode\Util.cs" />
+     <Compile Include="Assets\DesligaRaio.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\Achievement.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\DummyClient.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\IPlayGamesClient.cs" />

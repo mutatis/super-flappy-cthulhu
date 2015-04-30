@@ -6,6 +6,7 @@ public class MoventElder : MonoBehaviour
 	public float tempo;
 	public float velY = 6;
 	bool oi;
+	bool va = true;
 
 	// Use this for initialization
 	void Start () 
@@ -25,7 +26,7 @@ public class MoventElder : MonoBehaviour
 		{
 			velY = 6;
 		}
-		if(Time.timeScale == 1)
+		if(Time.timeScale == 1 && va)
 		{
 			transform.Translate(0, velY * Time.deltaTime, 0);
 		}
@@ -40,5 +41,13 @@ public class MoventElder : MonoBehaviour
 		yield return new WaitForSeconds (tempo);
 		oi = !oi;
 		StartCoroutine("Go");
+	}
+
+	IEnumerator Va()
+	{
+		va = false;
+		yield return new WaitForSeconds(2);
+		va = true;
+		StopCoroutine("Va");
 	}
 }
