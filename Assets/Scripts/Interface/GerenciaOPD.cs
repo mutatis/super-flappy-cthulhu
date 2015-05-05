@@ -25,6 +25,21 @@ public class GerenciaOPD : MonoBehaviour
 	{
 		if(Input.GetMouseButtonDown(0) && ok == false)
 		{
+			for(int i = 0; i < street.Length; i++)
+			{
+				street[i].enabled = false;
+				street[i].StopCoroutine("GO");
+			}
+			perso[1].sprite = muda[1];
+			posPerso[1].position = new Vector3(posPerso[1].position.x - 2, posPerso[1].position.y + 0.5f, 0);
+			//posPerso[1].position = new Vector2(8.1f, -5.4f);
+			//yield return new WaitForSeconds(0.3f);
+			//posPerso[1].position = new Vector2(64.6f, 3.9f);
+			//yield return new WaitForSeconds(0.1f);
+			AudioSource.PlayClipAtPoint(CthulhuSound[0], new Vector3(transform.position.x, transform.position.y, transform.position.z));
+			perso[0].sprite = muda[0];
+			cthulhu.enabled = true;
+			AudioSource.PlayClipAtPoint(CthulhuSound[1], new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			menu[0].SetActive(true);
 			camera.tem = Time.deltaTime;
 			camera.enabled = true;

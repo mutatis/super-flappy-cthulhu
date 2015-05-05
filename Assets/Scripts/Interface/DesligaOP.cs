@@ -11,6 +11,7 @@ public class DesligaOP : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		desliga[3].SetActive(false);
 		if(PlayerPrefs.GetInt("Retry") == 2)
 		{
 			ca.enabled = true;
