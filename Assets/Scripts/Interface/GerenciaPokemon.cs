@@ -12,6 +12,7 @@ public class GerenciaPokemon : MonoBehaviour
 	public GameObject[] menu;
 	public CanoPOkemon cano;
 	public MovmentMenu camera;
+	bool ok;
 	
 	// Use this for initialization
 	void Start () 
@@ -22,6 +23,14 @@ public class GerenciaPokemon : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if(Input.GetMouseButtonDown(0) && ok == false)
+		{
+			menu[0].SetActive(true);
+			camera.tem = Time.deltaTime;
+			camera.enabled = true;
+			menu[1].SetActive(false);
+			ok = true;
+		}
 	}
 	
 	IEnumerator GO()
@@ -51,5 +60,6 @@ public class GerenciaPokemon : MonoBehaviour
 		camera.tem = Time.deltaTime;
 		camera.enabled = true;
 		menu[0].SetActive(true);
+		ok = true;
 	}
 }

@@ -12,6 +12,7 @@ public class GerenciaOPD : MonoBehaviour
 	public AudioClip[] CthulhuSound;
 	public GameObject[] menu;
 	public MovmentMenu camera;
+	bool ok;
 	
 	// Use this for initialization
 	void Start () 
@@ -22,6 +23,14 @@ public class GerenciaOPD : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if(Input.GetMouseButtonDown(0) && ok == false)
+		{
+			menu[0].SetActive(true);
+			camera.tem = Time.deltaTime;
+			camera.enabled = true;
+			menu[1].SetActive(false);
+			ok = true;
+		}
 	}
 	
 	IEnumerator GO()
@@ -48,5 +57,6 @@ public class GerenciaOPD : MonoBehaviour
 		camera.tem = Time.deltaTime;
 		camera.enabled = true;
 		menu[1].SetActive(false);
+		ok = true;
 	}
 }
