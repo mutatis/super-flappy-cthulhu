@@ -9,7 +9,7 @@ public class CarregandoVideo : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		x = Random.Range(1, 9);
+		x = Random.Range(1, 10);
 		y = x.ToString();
 		Application.LoadLevel(y);	
 	}
