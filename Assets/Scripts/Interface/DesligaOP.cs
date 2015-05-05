@@ -26,7 +26,7 @@ public class DesligaOP : MonoBehaviour
 	IEnumerator GO()
 	{
 		float start = Time.realtimeSinceStartup;
-		while (Time.realtimeSinceStartup < start + 5)
+		while (Time.realtimeSinceStartup < start + 10)
 		{
 			yield return null;
 		}
