@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CarregandoVideo.cs" />
      <Compile Include="Assets\CubicPilot_4.6\Behaviors\AutoDelete.cs" />
      <Compile Include="Assets\CubicPilot_4.6\Behaviors\CausesDamage.cs" />
      <Compile Include="Assets\CubicPilot_4.6\Behaviors\CheatCodes.cs" />

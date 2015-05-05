@@ -195,6 +195,8 @@ public class VideoCthulhu : MonoBehaviour {
 		}
 		else if(collision.gameObject.tag == "Ground")
 		{			
+			Application.LoadLevel("FlappyCthulhu");
+			PlayerPrefs.SetInt ("Retry", 2);
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
 			morreu = true;
@@ -256,6 +258,8 @@ public class VideoCthulhu : MonoBehaviour {
 		}*/
 		else if(other.gameObject.tag == "Ground")
 		{
+			Application.LoadLevel("FlappyCthulhu");
+			PlayerPrefs.SetInt ("Retry", 2);
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			vel = 0;
 			morreu = true;

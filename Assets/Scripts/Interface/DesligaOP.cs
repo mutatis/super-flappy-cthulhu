@@ -5,6 +5,8 @@ public class DesligaOP : MonoBehaviour
 {
 	public MovmentMenu ca;
 	public GameObject[] desliga;
+	int x;
+	string y;
 
 	// Use this for initialization
 	void Start () 
@@ -18,8 +20,19 @@ public class DesligaOP : MonoBehaviour
 				Time.timeScale = 0;
 			}
 		}
+		StartCoroutine("GO");
 	}
-	
+
+	IEnumerator GO()
+	{
+		float start = Time.realtimeSinceStartup;
+		while (Time.realtimeSinceStartup < start + 5)
+		{
+			yield return null;
+		}
+		Application.LoadLevel("LoadVideo");
+	}
+
 	// Update is called once per frame
 	void Update () 
 	{
