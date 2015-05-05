@@ -51,7 +51,11 @@ public class VideoCthulhu : MonoBehaviour {
 		{
 			if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
 			{
-				Application.LoadLevel("FlappyCthulhu");
+				Debug.Log(Time.fixedTime);
+				anim.SetTrigger("Clico");
+				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
+				AudioSource.PlayClipAtPoint(asa, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+				//Application.LoadLevel("FlappyCthulhu");
 			}
 			//transform.Translate(0.2f, 0, 0);
 			if(rigidbody2D.velocity.y < 0)
