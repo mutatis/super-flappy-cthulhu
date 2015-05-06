@@ -1,13 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Interface\GerenciaOP.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Video\Assets\Script\Titulo.cs">
     <Files>
-      <File FileName="Assets\Plugins\Android\google-play-services_lib\AndroidManifest.xml" Line="18" Column="36" />
-      <File FileName="Assets\Plugins\Android\MainLibProj\AndroidManifest.xml" Line="10" Column="44" />
-      <File FileName="Assets\Plugins\Android\AndroidManifest.xml" Line="51" Column="41" />
-      <File FileName="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" Line="10" Column="9" />
-      <File FileName="Assets\Scripts\Interface\GerenciaPokemon.cs" Line="36" Column="30" />
-      <File FileName="Assets\Scripts\Interface\GerenciaOP.cs" Line="38" Column="128" />
+      <File FileName="..\Video\Assets\Script\CameraMov.cs" Line="41" Column="36" />
+      <File FileName="..\Video\Assets\Script\PlayParticle.cs" Line="1" Column="1" />
+      <File FileName="..\Video\Assets\Script\Titulo.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
