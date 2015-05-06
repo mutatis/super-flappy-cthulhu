@@ -1,10 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\Video\Assets\Script\Titulo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Interface\GPGDemo.cs">
     <Files>
-      <File FileName="..\Video\Assets\Script\CameraMov.cs" Line="41" Column="36" />
-      <File FileName="..\Video\Assets\Script\PlayParticle.cs" Line="1" Column="1" />
-      <File FileName="..\Video\Assets\Script\Titulo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cthulhu\VideoCthulhu.cs" Line="262" Column="34" />
+      <File FileName="Assets\Scripts\Interface\Retryflappy.cs" Line="8" Column="36" />
+      <File FileName="Assets\Scripts\Criação\CreatedFlappy.cs" Line="33" Column="4" />
+      <File FileName="Assets\Scripts\Camera\Muda.cs" Line="24" Column="8" />
+      <File FileName="Assets\Scripts\Interface\GPGDemo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Interface\TextPontos.cs" Line="44" Column="52" />
+      <File FileName="Assets\Scripts\Interface\TextHoghScore.cs" Line="11" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

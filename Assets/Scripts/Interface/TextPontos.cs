@@ -32,7 +32,7 @@ public class TextPontos : MonoBehaviour
 			AudioSource.PlayClipAtPoint(bate, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			audios.Stop();
 			pon = PlayerJump.player.pontos;
-			Social.ReportScore(PlayerJump.player.pontos, "CgkIsZ6ut68TEAIQAA", (bool success) => {
+			Social.ReportScore(PlayerPrefs.GetInt("flappyS"), "CgkIsZ6ut68TEAIQAA", (bool success) => {
 				
 			});
 		}
@@ -41,7 +41,7 @@ public class TextPontos : MonoBehaviour
 			AudioSource.PlayClipAtPoint(bate, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 			audios.Stop();
 			pon = PlayerJump.player.pontos;
-			Social.ReportScore(PlayerJump.player.pontos, "CgkIsZ6ut68TEAIQAA", (bool success) => {
+			Social.ReportScore(PlayerPrefs.GetInt("flappyS"), "CgkIsZ6ut68TEAIQAA", (bool success) => {
 				
 			});
 		}

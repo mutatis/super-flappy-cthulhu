@@ -9,7 +9,7 @@ public class Muda : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameCenterPlatform.ShowDefaultAchievementCompletionBanner (true);
+		/*GameCenterPlatform.ShowDefaultAchievementCompletionBanner (true);
 		Social.localUser.Authenticate(Process);
 		PlayGamesPlatform.Activate();
 		Social.localUser.Authenticate((bool success) => {
@@ -21,7 +21,7 @@ public class Muda : MonoBehaviour {
 			{
 				PlayerPrefs.SetInt("Logo", 0);
 			}
-		});
+		});*/
 		Application.LoadLevel ("FlappyCthulhu");
 	}
 	

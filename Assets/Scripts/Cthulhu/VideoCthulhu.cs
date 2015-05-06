@@ -51,6 +51,7 @@ public class VideoCthulhu : MonoBehaviour {
 		{
 			if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))
 			{
+				PlayerPrefs.SetInt ("Retry", 2);
 				/*Debug.Log(Time.fixedTime);
 				anim.SetTrigger("Clico");
 				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
@@ -194,6 +195,7 @@ public class VideoCthulhu : MonoBehaviour {
 		}
 		else if(collision.gameObject.tag == "Ground")
 		{			
+			PlayerPrefs.SetInt ("Retry", 0);
 			Application.LoadLevel("FlappyCthulhu");
 			PlayerPrefs.SetInt ("Retry", 2);
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
@@ -257,6 +259,7 @@ public class VideoCthulhu : MonoBehaviour {
 		}*/
 		else if(other.gameObject.tag == "Ground")
 		{
+			PlayerPrefs.SetInt ("Retry", 0);
 			Application.LoadLevel("FlappyCthulhu");
 			PlayerPrefs.SetInt ("Retry", 2);
 			AudioSource.PlayClipAtPoint(afogamento, new Vector3(transform.position.x, transform.position.y, transform.position.z));
