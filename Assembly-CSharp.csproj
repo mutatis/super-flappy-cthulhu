@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CarregandoVideo.cs" />
      <Compile Include="Assets\CubicPilot_4.6\Behaviors\AutoDelete.cs" />
      <Compile Include="Assets\CubicPilot_4.6\Behaviors\CausesDamage.cs" />
      <Compile Include="Assets\CubicPilot_4.6\Behaviors\CheatCodes.cs" />
@@ -181,11 +180,11 @@
      <Compile Include="Assets\GooglePlayGames\Platforms\PlayGamesClientFactory.cs" />
      <Compile Include="Assets\GooglePlayGames\PluginVersion.cs" />
      <Compile Include="Assets\Material\RendererLayer.cs" />
-     <Compile Include="Assets\Mexecaninho.cs" />
      <Compile Include="Assets\Scripts\Background\DayNight.cs" />
      <Compile Include="Assets\Scripts\Background\DestroyEnemy.cs" />
      <Compile Include="Assets\Scripts\Background\Inicio.cs" />
      <Compile Include="Assets\Scripts\Background\NuvemFalppy.cs" />
+     <Compile Include="Assets\Scripts\Camera\CarregandoVideo.cs" />
      <Compile Include="Assets\Scripts\Camera\Muda.cs" />
      <Compile Include="Assets\Scripts\Camera\TimeCamera.cs" />
      <Compile Include="Assets\Scripts\Cano\Cano.cs" />
@@ -194,6 +193,7 @@
      <Compile Include="Assets\Scripts\Cano\CanoPOkemon.cs" />
      <Compile Include="Assets\Scripts\Cano\EntradaEspecial.cs" />
      <Compile Include="Assets\Scripts\Cano\Mexe.cs" />
+     <Compile Include="Assets\Scripts\Cano\Mexecaninho.cs" />
      <Compile Include="Assets\Scripts\Cano\Saidaespecial.cs" />
      <Compile Include="Assets\Scripts\Compartilhamento\ShareFacebook.cs" />
      <Compile Include="Assets\Scripts\Criação\CreatedDagon.cs" />
