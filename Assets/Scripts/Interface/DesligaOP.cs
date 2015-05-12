@@ -21,6 +21,11 @@ public class DesligaOP : MonoBehaviour
 				Time.timeScale = 0;
 			}
 		}
+		for(int i = 0; i < desliga.Length; i++)
+		{
+			desliga[i].SetActive(false);
+			Time.timeScale = 0;
+		}
 		StartCoroutine("GO");
 	}
 
