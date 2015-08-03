@@ -10,9 +10,11 @@ public class ImageFalppy : MonoBehaviour
 	public int limit;
 	int num = 25;
 
-	// Use this for initialization
-	void Start () 
-	{
+    // Use this for initialization
+    void Start()
+    {
+        GameObject.FindGameObjectWithTag("Ads").GetComponent<GoogleAds>().Show();
+
 #if UNITY_IOS
 		num *= 2;
 #endif

@@ -9,6 +9,7 @@ public class Retryflappy : MonoBehaviour
 		PlayerPrefs.SetInt ("Retry", 2);
 		PlayerJump.player.morreu = false;
 		PlayerJump.player.end = false;
-		Application.LoadLevel ("FlappyCthulhu");
+        GameObject.FindGameObjectWithTag("Ads").GetComponent<GoogleAds>().Destroy();
+        Application.LoadLevel ("FlappyCthulhu");
 	}
 }
