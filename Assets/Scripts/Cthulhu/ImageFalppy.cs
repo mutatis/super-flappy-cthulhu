@@ -14,16 +14,29 @@ public class ImageFalppy : MonoBehaviour
     void Start()
     {
         GameObject.FindGameObjectWithTag("Ads").GetComponent<GoogleAds>().Show();
+		PlayerPrefs.SetInt("Mortes", (PlayerPrefs.GetInt("Mortes") + 1));
+
+		if(PlayerPrefs.GetInt("Mortes") > 5)
+		{
+			PlayerPrefs.SetInt("Mortes", 0);
+		}
 
 #if UNITY_IOS
 		num *= 2;
 #endif
 		StartCoroutine("Go");
 	}
-	
+
+	public float etemp;
+
 	// Update is called once per frame
 	void Update () 
 	{
+		if(Time.timeScale == 1 && Time.deltaTime != 0)
+		{
+			etemp = Time.deltaTime;
+		}
+
 		transform.position = new Vector3(transform.position.x, transform.position.y, 200);
 		if(vai)
 		{

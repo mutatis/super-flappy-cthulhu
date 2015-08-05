@@ -7,7 +7,7 @@
     android:versionName="1.0" >
     
     <uses-sdk android:minSdkVersion="9"  /> 
-    <!--android:targetSdkVersion="16"-->
+    <!--android:targetSdkVersion="19"-->
  
     <application>
         <meta-data android:name="com.google.android.gms.games.APP_ID"
