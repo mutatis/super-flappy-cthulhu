@@ -27,7 +27,7 @@ public class GoogleAds : MonoBehaviour
     {
         print("Requesting banner");
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-7985621142287872/5465686945";
+        string adUnitId = "ca-app-pub-7985621142287872/3326776942";
 #elif UNITY_IPHONE
         string adUnitId = "INSERT_IOS_BANNER_AD_UNIT_ID_HERE";
 #else
