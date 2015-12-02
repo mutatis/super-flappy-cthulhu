@@ -8,7 +8,7 @@ public class UNityAAds : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		Advertisement.Initialize ("43223");
+		Advertisement.Initialize ("91942");
 	}
 	
 	// Update is called once per frame
